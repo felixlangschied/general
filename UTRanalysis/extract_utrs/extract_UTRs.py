@@ -28,7 +28,7 @@ with open(tax_path, 'r') as fh:
                         prot_id = feature.qualifiers['protein_id'][0]
                         loc = feature.location
                         prot_dict = {}
-                        prot_dict['five_UTR'] = str(nuc_seq[:loc.start] )
+                        prot_dict['five_UTR'] = str(nuc_seq[:loc.start])
                         prot_dict['three_UTR'] = str(nuc_seq[loc.end:])
                         out_dict[prot_id] = prot_dict
         print('# UTR extraction for {} done'.format(name))

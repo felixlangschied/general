@@ -82,10 +82,7 @@ def calc_distmat(dna_mod, fasta_path, faln=False):
     aln_cmd = (
         f'muscle -phyi -in {fasta_path} -out {aln_out}'
     )
-    if not os.path.isfile(aln_out) or faln:
-        sp.run(aln_cmd, shell=True)
-    else:
-        print('# Found alignment at {}. Using this one instead..'.format(aln_out))
+    print('# Found alignment at {}. Using this one instead..'.format(aln_out))
     matrix_out = aln_out.replace('.phys', '.matrix')
     # calculate distance matrix
     if dna_mod in fastme_models:
