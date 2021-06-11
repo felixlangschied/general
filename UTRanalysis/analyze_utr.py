@@ -2,10 +2,19 @@ import glob
 import json
 import os
 
-human_path = r'C:\Users\felix\PycharmProjects\general\UTRanalysis\utr_data\GCF_000001405.39_GRCh38.p13_UTRs.json'
-mouse_path = r'C:\Users\felix\PycharmProjects\general\UTRanalysis\utr_data\GCF_000001635.27_GRCm39_UTRs.json'
-outdir = r'C:\Users\felix\PycharmProjects\general\UTRanalysis\utr_data'
+# human_path = r'C:\Users\felix\PycharmProjects\general\UTRanalysis\utr_data\GCF_000001405.39_GRCh38.p13_UTRs.json'
+# mouse_path = r'C:\Users\felix\PycharmProjects\general\UTRanalysis\utr_data\GCF_000001635.27_GRCm39_UTRs.json'
+utr_data_path = r'C:\Users\felix\PycharmProjects\general\UTRanalysis\utr_data'
+outdir = r'C:\Users\felix\PycharmProjects\general\UTRanalysis\utr_data\'
 target_path = r'C:\Users\felix\PycharmProjects\general\UTRanalysis\list_of_connected_targetprots.txt'
+tax_list = r'C:\Users\felix\PycharmProjects\general\UTRanalysis\taxid_name_assembly.tsv'
+# utr_data_path = '/share/project/felixl/ncOrtho/data/UTR/all_iso_all_genes'
+# target_path = '/home/felixl/project/general/UTRanalysis/list_of_connected_targetprots.txt'
+# tax_list = '/share/project/felixl/ncOrtho/data/UTR/taxid_name_assembly.tsv'
+# outdir = '/home/felixl/project/general/UTRanalysis/utr_alignments/longest_utr'
+
+if not os.path.isdir(outdir):
+    os.mkdir(outdir)
 
 protein_list = []
 with open(target_path, 'r') as fh:
@@ -17,35 +26,55 @@ for tname in protnames:
     mousename = tname.capitalize()
     protein_list.append((tname, mousename))
 
-# # always human first
-# protein_list = [
-#     ('MAPK1', 'Mapk1'),
-#     ('CDK2', 'Cdk2'),
-#     ('BMPR1A', 'Bmpr1a'),
-#     ('IGFBP5', 'Igfbp5'),
-#     ('RAN', 'Ran'),
-#
-# ]
+assembly_2_name = {}
+name_2_assembly = {}
+with open(tax_list, 'r') as fh:
+    for line in fh:
+        taxid, name, assembly = line.strip().split('\t')
+        if assembly == 'None':
+            continue
+        assembly_2_name[assembly] = name
+        name_2_assembly[name] = assembly
 
-with open(human_path, 'r') as fh:
-    human_data = json.load(fh)
-with open(mouse_path, 'r') as fh:
-    mouse_data = json.load(fh)
+# with open(human_path, 'r') as fh:
+#     human_data = json.load(fh)
+# with open(mouse_path, 'r') as fh:
+#     mouse_data = json.load(fh)
 
 for protein in protein_list:
+    print('# Starting UTR extraction for {}'.format(protein[0]))
     with open(f'{outdir}{os.sep}{protein[0]}_utr.fa', 'w') as of:
-        for prot_id in human_data[protein[0]]:
-            seq = human_data[protein[0]][prot_id]
-            print(len(seq))
-            header = f'>human_{prot_id}\n'
+        for assem in assembly_2_name:
+        # for assem in list(assembly_2_name)[0:1]:
+            # load utr data
+            ass_path = f'{utr_data_path}/{assem}_UTRs.json'
+            with open(ass_path, 'r') as fh:
+                utr_dict = json.load(fh)
+            # try to extract UTR sequence with each type of identifier (e.g MAPK1 or Mapk1)
+            # print(utr_dict.keys())
+            longest_length = 0
+            try:
+                for c, prot_id in enumerate(utr_dict[protein[0]]):
+                    # header = '>{}_{}_{}\n'.format(assembly_2_name[assem], protein[0], c)
+                    seq = utr_dict[protein[0]][prot_id]
+                    length = len(seq)
+                    if length > longest_length:
+                        longest_length = length
+                        out_seq = seq
+
+            except KeyError:
+                try:
+                    for c, prot_id in enumerate(utr_dict[protein[1]]):
+                        # header = '>{}_{}_{}\n'.format(assembly_2_name[assem], protein[0], c)
+                        seq = utr_dict[protein[1]][prot_id]
+                        length = len(seq)
+                        if length > longest_length:
+                            longest_length = length
+                            out_seq = seq
+                except KeyError:
+                    print('# No UTR found for {} in {}'.format(protein[0], assembly_2_name[assem]))
+                    continue
+            header = '>{}_{}\n'.format(assembly_2_name[assem], protein[0])
             of.write(header)
-            of.write(seq)
-            of.write('\n')
-        print('')
-        for prot_id in mouse_data[protein[1]]:
-            seq = mouse_data[protein[1]][prot_id]
-            print(len(seq))
-            header = f'>mouse_{prot_id}\n'
-            of.write(header)
-            of.write(seq)
+            of.write(out_seq)
             of.write('\n')
