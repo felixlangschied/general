@@ -5,13 +5,16 @@ import os
 # human_path = r'C:\Users\felix\PycharmProjects\general\UTRanalysis\utr_data\GCF_000001405.39_GRCh38.p13_UTRs.json'
 # mouse_path = r'C:\Users\felix\PycharmProjects\general\UTRanalysis\utr_data\GCF_000001635.27_GRCm39_UTRs.json'
 utr_data_path = r'C:\Users\felix\PycharmProjects\general\UTRanalysis\utr_data'
-outdir = r'C:\Users\felix\PycharmProjects\general\UTRanalysis\utr_data\'
+outdir = r'C:\Users\felix\PycharmProjects\general\UTRanalysis\utr_data\prot_align'
 target_path = r'C:\Users\felix\PycharmProjects\general\UTRanalysis\list_of_connected_targetprots.txt'
 tax_list = r'C:\Users\felix\PycharmProjects\general\UTRanalysis\taxid_name_assembly.tsv'
 # utr_data_path = '/share/project/felixl/ncOrtho/data/UTR/all_iso_all_genes'
 # target_path = '/home/felixl/project/general/UTRanalysis/list_of_connected_targetprots.txt'
 # tax_list = '/share/project/felixl/ncOrtho/data/UTR/taxid_name_assembly.tsv'
 # outdir = '/home/felixl/project/general/UTRanalysis/utr_alignments/longest_utr'
+
+
+longest_only = True
 
 if not os.path.isdir(outdir):
     os.mkdir(outdir)
@@ -58,9 +61,14 @@ for protein in protein_list:
                     # header = '>{}_{}_{}\n'.format(assembly_2_name[assem], protein[0], c)
                     seq = utr_dict[protein[0]][prot_id]
                     length = len(seq)
-                    if length > longest_length:
+                    if longest_only and length > longest_length:
                         longest_length = length
                         out_seq = seq
+                    else:
+                        header = '>{}_{}_{}\n'.format(assembly_2_name[assem], prot_id, protein[0])
+                        of.write(header)
+                        of.write(seq)
+                        of.write('\n')
 
             except KeyError:
                 try:
@@ -68,13 +76,19 @@ for protein in protein_list:
                         # header = '>{}_{}_{}\n'.format(assembly_2_name[assem], protein[0], c)
                         seq = utr_dict[protein[1]][prot_id]
                         length = len(seq)
-                        if length > longest_length:
+                        if longest_only and length > longest_length:
                             longest_length = length
                             out_seq = seq
+                        else:
+                            header = '>{}_{}_{}\n'.format(assembly_2_name[assem], prot_id, protein[0])
+                            of.write(header)
+                            of.write(seq)
+                            of.write('\n')
                 except KeyError:
                     print('# No UTR found for {} in {}'.format(protein[0], assembly_2_name[assem]))
                     continue
-            header = '>{}_{}\n'.format(assembly_2_name[assem], protein[0])
-            of.write(header)
-            of.write(out_seq)
-            of.write('\n')
+            if longest_only:
+                header = '>{}_{}\n'.format(assembly_2_name[assem], protein[0])
+                of.write(header)
+                of.write(out_seq)
+                of.write('\n')
