@@ -1,20 +1,30 @@
 import pandas as pd
 
 gff_path = '/share/project/felixl/ncOrtho/data/mirGeneDB/data/ALL.gff'
-org_path = '/share/project/felixl/ncOrtho/data/mirGeneDB/data/organisms.txt'
+org_path = '/share/project/felixl/ncOrtho/data/mirGeneDB/data/mirbase_organisms.txt'
 
 # out = '/share/project/felixl/ncOrtho/data/mirGeneDB/phyloprofile.long'
 out = '/home/felixl/Desktop/tmp/mirgenedb.long'
+out_spec = '/share/project/felixl/ncOrtho/data/mirGeneDB/data/species_list.txt'
+
 
 
 org_dict = {}
-with open(org_path, 'r') as fh:
+with open(org_path, 'r') as fh, open(out_spec, 'w') as of:
     for line in fh:
         if not line.startswith('#'):
             data = line.strip().split('\t')
             abb = data[0]
+            spec = data[2].replace(' ', '_')
             taxid = data[-1]
             org_dict[abb] = taxid
+            of.write(f'{abb}|{spec}|{taxid}\n')
+    of.write(f'sto|Scyliorhinus_torazame|75743\n')
+    of.write(f'cgi|Crassostrea_gigas|29159\n')
+    of.write(f'efe|Eisenia_fetida|6396\n')
+    of.write(f'bge|Blattella_germanica|6973\n')
+    of.write(f'pfl|Ptychodera_flava|63121\n')
+    of.write(f'lan|Lingula_anatina|7574\n')
 
 # manual entries (not in miRBase)
 org_dict['sto'] = 75743  # Scyliorhinus torazame
