@@ -1,0 +1,59 @@
+8364|Xenopus tropicalis|GCF_000004195.4|XENTR|active
+9031|Gallus gallus|GCF_016699485.2|bGalGal1|active
+9615|Canis lupus familiaris|GCF_014441545.1|SID07034|active
+13616|Monodelphis domestica|GCF_000002295.2||active
+9544|Macaca mulatta|GCF_003339765.1|AG07107|active
+9545|Macaca nemestrina|GCF_000956065.1|M95218|active
+61621|Rhinopithecus bieti|GCF_001698545.1|Rb0|active
+9606|Homo sapiens|GCF_000001405.39||active
+9597|Pan paniscus|GCF_013052645.1|Mhudiblu (Carbone #601152)|active
+9598|Pan troglodytes|GCF_002880755.1|Yerkes chimp pedigree #C0471 (Clint)|active
+9258|Ornithorhynchus anatinus|GCF_004115215.2|Pmale09|active
+10029|Cricetulus griseus|GCF_003668045.3||active
+10090|Mus musculus|GCF_000001635.27||active
+10116|Rattus norvegicus|GCF_015227675.2||active
+9913|Bos taurus|GCF_002263795.1|L1 Dominette 01449 registration number 42190680|active
+9940|Ovis aries|GCF_002742125.1||active
+9823|Sus scrofa|GCF_000003025.6|TJ Tabasco|active
+7955|Danio rerio|GCF_000002035.6|DANRE|active
+31033|Takifugu rubripes|GCF_901000725.2|TAKRU|active
+9796|Equus caballus|GCF_002863925.1|Twilight|active
+8090|Oryzias latipes|GCF_002234675.1|ORYLA|active
+7757|Petromyzon marinus|GCF_010993605.1|PETMA|active
+28377|Anolis carolinensis|GCF_000090745.1|ANOCA|active
+9305|Sarcophilus harrisii|GCF_902635505.1||active
+8255|Paralichthys olivaceus|GCF_001970005.1|PAROL|active
+8267|Hippoglossus hippoglossus|GCF_009819705.1|HIPHI|active
+7962|Cyprinus carpio|GCF_000951615.1|CYPCA|active
+9417|Artibeus jamaicensis|GCF_014825515.1|1a|active
+7998|Ictalurus punctatus|GCF_001660625.1|ICTPU|active
+8030|Salmo salar|GCF_000233375.1|SALSA|active
+29078|Eptesicus fuscus|GCF_000308155.1|BU_THK_EF1|active
+8496|Alligator mississippiensis|GCF_000281125.3|ALLMI|active
+8932|Columba livia|GCF_000337935.1|COLLI|active
+176946|Python bivittatus|GCF_000186305.1|PYTBI|active
+7868|Callorhinchus milii|GCF_000165045.1|CALMI|active
+9925|Capra hircus|GCF_001704415.1||active
+9986|Oryctolagus cuniculus|GCF_000003625.3||active
+246437|Tupaia chinensis|GCF_000334495.1||active
+9483|Callithrix jacchus|GCF_009663435.1||active
+9402|Pteropus alecto|GCF_000325575.1||active
+7957|Carassius auratus|GCF_003368295.1|CARAU|active
+8022|Oncorhynchus mykiss|GCF_013265735.2|Arlee|active
+8128|Oreochromis niloticus|GCF_001858045.2|ORENI|active
+8153|Haplochromis burtoni|GCF_000239415.1|HAPBU|active
+106582|Maylandia zebra|GCF_000238955.4|MAYZE|active
+32507|Neolamprologus brichardi|GCF_000239395.1|NEOBR|active
+303518|Pundamilia nyererei|GCF_000239375.1|PUNNY|active
+89462|Bubalus bubalis|GCF_003121395.1||active
+8005|Electrophorus electricus|GCF_013358815.1|fEleEle1|active
+8049|Gadus morhua|GCF_902167405.1|GADMO|active
+8839|Anas platyrhynchos|GCF_015476345.1|Z2|active
+10141|Cavia porcellus|GCF_000151735.1||active
+9361|Dasypus novemcinctus|GCF_000208655.1|3-136|active
+9371|Echinops telfairi|GCF_000313985.2|266|active
+30608|Microcebus murinus|GCF_000165445.2|mixed|active
+61853|Nomascus leucogenys|GCF_006542625.1|Asia|active
+39432|Saimiri boliviensis boliviensis|GCF_016699345.1|100643|active
+30611|Otolemur garnettii|GCF_000181295.1|467f Iridium|active
+105023|Nothobranchius furzeri|GCF_001465895.1|NOTFU|active
