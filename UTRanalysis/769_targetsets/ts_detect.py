@@ -109,7 +109,7 @@ elif analysis == 'string':
     # print(df.head(30))
 
     above_1 = df['score_hsa'] >= 1
-    fil_df = df[above_1].sort_values(by='score_mmu', ascending=False)
+    fil_df = df[above_1].sort_values(by=['score_mmu', 'score_hsa'], ascending=False)
     print(fil_df)
     fil_df.to_csv(f'{outdir}/filtered_string_result.tsv', sep='\t')
     # print(f'{outdir}/string_result.tsv')

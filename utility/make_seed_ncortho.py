@@ -2,6 +2,7 @@ import os
 
 table_path = "/share/gluster/GeneSets/NCBI-Genomes/MammalianVertebratesRefSeq/raw_dir/MammalianVertebratesRefSeq_taxid2GCF.txt"
 flatdir_path = "/share/gluster/GeneSets/NCBI-Genomes/MammalianVertebratesRefSeq/raw_dir/active"
+qdb_path = ''
 
 ncortho_call = (
     "/home/felixl/PycharmProjects/ncOrtho/ncOrtho/ncortho.py "

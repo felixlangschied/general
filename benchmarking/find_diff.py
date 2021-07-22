@@ -33,7 +33,7 @@ com = com.sort_values(by='diff', ascending=False)
 print(com.head())
 
 top_30_diffs = list(com.head(30).index)
-with open('top_30_diff.txt', 'w') as of:
+with open('data/top_30_diff.txt', 'w') as of:
     of.write(','.join(top_30_diffs))
     of.write('\n')
 

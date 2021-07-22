@@ -1,23 +1,22 @@
 import os
 
-
-
 spec_path = '/share/project/felixl/ncOrtho/data/mirGeneDB/data/available_specs.txt'
 mammal_path = '/share/gluster/GeneSets/NCBI-Genomes/MammalianVertebratesRefSeq/raw_dir/active/{}/genomic.fna'
 nonmammal_path = '/share/gluster/GeneSets/NCBI-Genomes/nonMammalianVertebratesRefSeq/raw_dir/active_June21/{}/genomic.fna'
 
-seed_out = '/share/project2/felix/ncOrtho/05seed.txt'
+seed_out = '/share/project2/felix/ncOrtho/06seed.txt'
 
-call = ('ncsearch '
-        '-m /share/project/felixl/ncortho/data/mirgenedb/coreset/output/cms '
-        '-n /share/project/felixl/ncortho/data/mirgenedb/data/mirgenedb.tsv '
-        '-o /share/project2/felix/ncortho/mirgenedb/05cutoff '
+call = ('time ncSearch '
+        '-m /share/project/felixl/ncOrtho/data/mirGeneDB/coreset/output/CMs '
+        '-n /share/project/felixl/ncOrtho/data/mirGeneDB/data/mirgenedb.tsv '
+        '-o /share/project2/felix/ncOrtho/mirgenedb/06cutoff '
         '-q {0} '
-        '-r /share/gluster/genesets/ncbi-genomes/mammalianvertebratesrefseq/raw_dir/active/gcf_000001405.39/genomic.fna '
+        '-r /share/gluster/GeneSets/NCBI-Genomes/MammalianVertebratesRefSeq/raw_dir/active/GCF_000001405.39/genomic.fna '
         '--cpu=4 '
         '--queryname={1} '
-        '--cm_cutoff=0.5 '
-        '--refblast=/share/project/felixl/ncortho/data/hsa_ref/refseq/test/data/genomic.fna')
+        '--queryblast=/share/project2/felix/ncOrtho/mirGeneDB/05cutoff/{1}/data/{1}.fa '
+        '--cm_cutoff=0.6 '
+        '--refblast=/share/project/felixl/ncOrtho/data/hsa_ref/refseq/test/data/genomic.fna')
 
 with open(spec_path, 'r') as fh, open(seed_out, 'w') as of:
     for line in fh:
