@@ -20,13 +20,12 @@ with open(over05_path, 'r') as fh:
         fold_cmd = f'RNAfold -i {ipath}'
         res = sp.run(fold_cmd, shell=True, capture_output=True)
         out = res.stdout.decode('utf-8')
-        score = out.split('(').replace(')', '')
+        score = out.split('(')[1].replace(')', '')
         # fill dict
         if specname not in outdict:
             outdict[specname] = {}
         outdict[specname][mirname] = score
         allscores.append(score)
         print(out)
-
         break
 print(outdict)
