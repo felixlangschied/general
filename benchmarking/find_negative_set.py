@@ -7,16 +7,26 @@ outpath = '/home/felixl/PycharmProjects/general/benchmarking/data/RNAfold'
 if not os.path.isdir(outpath):
     os.mkdir(outpath)
 
+
+outdict = {}
+allscores = []
 with open(over05_path, 'r') as fh:
     for line in fh:
         ipath = line.split()[0].replace('mirGeneDB', 'mirgenedb')
-        print(ipath)
-        fname = '_'.join(ipath.split('/')[-2:]).replace('_pre_orthologs.fa', '')
-        # print(f'{outpath}/{fname}')
+        specname = ipath.split('/')[7]
+        mirname = ipath.split('/')[-1].replace('_pre_orthologs.fa', '')
 
+        # run RNAfold
         fold_cmd = f'RNAfold -i {ipath}'
         res = sp.run(fold_cmd, shell=True, capture_output=True)
         out = res.stdout.decode('utf-8')
+        score = out.split('(').replace(')', '')
+        # fill dict
+        if specname not in outdict:
+            outdict[specname] = {}
+        outdict[specname][mirname] = score
+        allscores.append(score)
         print(out)
 
         break
+print(outdict)
