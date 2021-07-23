@@ -14,8 +14,9 @@ with open(over05_path, 'r') as fh:
         fname = '_'.join(ipath.split('/')[-2:]).replace('_pre_orthologs.fa', '')
         # print(f'{outpath}/{fname}')
 
-        fold_cmd = f'RNAfold -i {ipath} -o {outpath}/{fname}'
-        sp.run(fold_cmd, shell=True)
-
+        fold_cmd = f'RNAfold -i {ipath}'
+        res = sp.run(fold_cmd, shell=True, capture_output=True)
+        out = res.stdout.decode('utf-8')
+        print(out)
 
         break
