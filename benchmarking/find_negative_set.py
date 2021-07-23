@@ -12,7 +12,9 @@ with open(over05_path, 'r') as fh:
         ipath = line.split()[0].replace('mirGeneDB', 'mirgenedb')
         print(ipath)
         fname = '_'.join(ipath.split('/')[-2:]).replace('_pre_orthologs.fa', '')
-        fold_cmd = f'RNAfold -i {ipath} -o {outpath}/{fname}.txt'
+        # print(f'{outpath}/{fname}')
+
+        fold_cmd = f'RNAfold -i {ipath} -o {outpath}/{fname}'
         sp.run(fold_cmd, shell=True)
 
 
