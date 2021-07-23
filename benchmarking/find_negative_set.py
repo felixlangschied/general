@@ -11,7 +11,8 @@ if not os.path.isdir(outpath):
 
 outdict = {}
 allscores = []
-with open(over05_path, 'r') as fh:
+out_stdout = f'{outpath}/all05_RNAfold_results.txt'
+with open(over05_path, 'r') as fh, open(out_stdout, 'w') as of:
     for line in fh:
         ipath = line.split()[0].replace('mirGeneDB', 'mirgenedb')
         specname = ipath.split('/')[7]
@@ -21,6 +22,7 @@ with open(over05_path, 'r') as fh:
         fold_cmd = f'RNAfold -i {ipath}'
         res = sp.run(fold_cmd, shell=True, capture_output=True)
         out = res.stdout.decode('utf-8')
+        of.write(out)
         score = out.split(' (')[1].replace(')\n', '')
         # fill dict
         if specname not in outdict:
@@ -31,4 +33,4 @@ with open(over05_path, 'r') as fh:
 
 outfile = f'{outpath}/all05_RNAfold.json'
 with open(outfile, 'w') as of:
-    json.dump(outdict)
+    json.dump(outdict, of)
