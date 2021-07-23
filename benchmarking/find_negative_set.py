@@ -29,7 +29,4 @@ with open(over05_path, 'r') as fh:
         print(out)
 
         break
-<<<<<<< HEAD
-=======
 print(outdict)
->>>>>>> 7b479156147546d69406732970c3bd7814465912
