@@ -90,8 +90,7 @@ print(fam_df)
 print(spec_df)
 
 # save results
-with open(f'{out_dir}/spec_missing_TP.tsv', 'w') as of:
-    spec_df.to_csv(sep='\t')
-with open(f'{out_dir}/fam_missing_TP.tsv', 'w') as of:
-    fam_df.to_csv(sep='\t')
+spec_df.to_csv(f'{out_dir}/spec_missing_TP.tsv', sep='\t')
+fam_df.to_csv(f'{out_dir}/fam_missing_TP.tsv', sep='\t')
+
 
