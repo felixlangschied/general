@@ -3,10 +3,9 @@ import subprocess as sp
 import json
 
 # over05_path = r'C:\Users\felix\PycharmProjects\general\benchmarking\data\05overview.txt'
-over05_path = '/home/felixl/PycharmProjects/general/benchmarking/data/05overview.txt'
-outpath = '/home/felixl/PycharmProjects/general/benchmarking/data'
-if not os.path.isdir(outpath):
-    os.mkdir(outpath)
+over_path = '/home/felixl/PycharmProjects/general/benchmarking/data/06overview.txt'
+outfile = '/home/felixl/PycharmProjects/general/benchmarking/data/all06_RNAfold.json'
+
 
 def chunks(lst, n):
     """Yield successive n-sized chunks from lst."""
@@ -16,7 +15,7 @@ def chunks(lst, n):
 df_dict = {'species': [], 'mirna_coorth': [], 'mirna': [], 'mirna_fam': [], 'score': [], 'seq': [], 'scheme': []}
 # out_stdout = f'{outpath}/all05_RNAfold_results.txt'
 # with open(over05_path, 'r') as fh, open(out_stdout, 'w') as of:
-with open(over05_path, 'r') as fh:
+with open(over_path, 'r') as fh:
     for c, line in enumerate(fh):
         print(f'{c} / 15880')
         ipath = line.split()[0].replace('mirGeneDB', 'mirgenedb')
@@ -52,6 +51,6 @@ with open(over05_path, 'r') as fh:
         # if c == 100:
         #     break
 # print(df_dict)
-outfile = f'{outpath}/all05_RNAfold.json'
+
 with open(outfile, 'w') as of:
     json.dump(df_dict, of)
