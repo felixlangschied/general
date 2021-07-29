@@ -1,0 +1,210 @@
+# Assembly name:  mRatBN7.2
+# Organism name:  Rattus norvegicus (Norway rat)
+# Infraspecific name:  strain=BN/NHsdMcwi
+# Sex:  male
+# Taxid:          10116
+# BioSample:      SAMN16261960
+# BioProject:     PRJNA662791
+# Submitter:      Wellcome Sanger Institute
+# Date:           2020-11-10
+# Assembly type:  haploid (principal pseudohaplotype of diploid)
+# Release type:   minor
+# Assembly level: Chromosome
+# Genome representation: full
+# WGS project:    JACYVU01
+# Assembly method: FALCON-Unzip v. 2020
+# Expected final version: yes
+# Genome coverage: 92.0x
+# Sequencing technology: PacBio Sequel; 10X Genomics Chromium; BioNano; Arima Hi-C
+# GenBank assembly accession: GCA_015227675.2
+# RefSeq assembly accession: GCF_015227675.2
+# RefSeq assembly and GenBank assemblies identical: no
+# Linked assembly: GCA_016700215.1 (alternate pseudohaplotype of diploid)
+#
+## Assembly-Units:
+## GenBank Unit Accession	RefSeq Unit Accession	Assembly-Unit name
+## GCA_015227685.1	GCF_015227685.1	Primary Assembly
+## GCA_000002045.1	GCF_000002045.1	non-nuclear
+#
+# Ordered by chromosome/plasmid; the chromosomes/plasmids are followed by
+# unlocalized scaffolds.
+# Unplaced scaffolds are listed at the end.
+# RefSeq is equal or derived from GenBank object.
+#
+# Sequence-Name	Sequence-Role	Assigned-Molecule	Assigned-Molecule-Location/Type	GenBank-Accn	Relationship	RefSeq-Accn	Assembly-Unit	Sequence-Length	UCSC-style-name
+1	assembled-molecule	1	Chromosome	CM026974.1	=	NC_051336.1	Primary Assembly	260522016	na
+2	assembled-molecule	2	Chromosome	CM026975.1	=	NC_051337.1	Primary Assembly	249053267	na
+3	assembled-molecule	3	Chromosome	CM026976.1	=	NC_051338.1	Primary Assembly	169034231	na
+4	assembled-molecule	4	Chromosome	CM026977.1	=	NC_051339.1	Primary Assembly	182687754	na
+5	assembled-molecule	5	Chromosome	CM026978.1	=	NC_051340.1	Primary Assembly	166875058	na
+6	assembled-molecule	6	Chromosome	CM026979.1	=	NC_051341.1	Primary Assembly	140994061	na
+7	assembled-molecule	7	Chromosome	CM026980.1	=	NC_051342.1	Primary Assembly	135012528	na
+8	assembled-molecule	8	Chromosome	CM026981.1	=	NC_051343.1	Primary Assembly	123900184	na
+9	assembled-molecule	9	Chromosome	CM026982.1	=	NC_051344.1	Primary Assembly	114175309	na
+10	assembled-molecule	10	Chromosome	CM026983.1	=	NC_051345.1	Primary Assembly	107211142	na
+11	assembled-molecule	11	Chromosome	CM026984.1	=	NC_051346.1	Primary Assembly	86241447	na
+12	assembled-molecule	12	Chromosome	CM026985.1	=	NC_051347.1	Primary Assembly	46669029	na
+13	assembled-molecule	13	Chromosome	CM026986.1	=	NC_051348.1	Primary Assembly	106807694	na
+14	assembled-molecule	14	Chromosome	CM026987.1	=	NC_051349.1	Primary Assembly	104886043	na
+15	assembled-molecule	15	Chromosome	CM026988.1	=	NC_051350.1	Primary Assembly	101769107	na
+16	assembled-molecule	16	Chromosome	CM026989.1	=	NC_051351.1	Primary Assembly	84729064	na
+17	assembled-molecule	17	Chromosome	CM026990.1	=	NC_051352.1	Primary Assembly	86533673	na
+18	assembled-molecule	18	Chromosome	CM026991.1	=	NC_051353.1	Primary Assembly	83828827	na
+19	assembled-molecule	19	Chromosome	CM026992.1	=	NC_051354.1	Primary Assembly	57337602	na
+20	assembled-molecule	20	Chromosome	CM026993.1	=	NC_051355.1	Primary Assembly	54435887	na
+X	assembled-molecule	X	Chromosome	CM026994.1	=	NC_051356.1	Primary Assembly	152453651	na
+Y	assembled-molecule	Y	Chromosome	CM026995.1	=	NC_051357.1	Primary Assembly	18315841	na
+12_unloc2	unlocalized-scaffold	12	Chromosome	JACYVU010000238.1	=	NW_023637712.1	Primary Assembly	210070	na
+12_unloc1	unlocalized-scaffold	12	Chromosome	MU150189.1	=	NW_023637711.1	Primary Assembly	1402623	na
+19_unloc1	unlocalized-scaffold	19	Chromosome	JACYVU010000315.1	=	NW_023637713.1	Primary Assembly	23956	na
+19_unloc2	unlocalized-scaffold	19	Chromosome	JACYVU010000316.1	=	NW_023637714.1	Primary Assembly	23219	na
+19_unloc3	unlocalized-scaffold	19	Chromosome	JACYVU010000317.1	=	NW_023637715.1	Primary Assembly	19663	na
+19_unloc4	unlocalized-scaffold	19	Chromosome	JACYVU010000318.1	=	NW_023637716.1	Primary Assembly	14256	na
+19_unloc5	unlocalized-scaffold	19	Chromosome	JACYVU010000319.1	=	NW_023637717.1	Primary Assembly	202997	na
+Y_unloc1	unlocalized-scaffold	Y	Chromosome	JACYVU010000493.1	=	NW_023637718.1	Primary Assembly	444596	na
+Y_unloc2	unlocalized-scaffold	Y	Chromosome	MU150190.1	=	NW_023637719.1	Primary Assembly	573231	na
+Y_unloc3	unlocalized-scaffold	Y	Chromosome	MU150191.1	=	NW_023637720.1	Primary Assembly	1794995	na
+Y_unloc4	unlocalized-scaffold	Y	Chromosome	MU150192.1	=	NW_023637721.1	Primary Assembly	273924	na
+Y_unloc5	unlocalized-scaffold	Y	Chromosome	MU150193.1	=	NW_023637722.1	Primary Assembly	383091	na
+scaffold_29	unplaced-scaffold	na	na	JACYVU010000587.1	=	NW_023637729.1	Primary Assembly	20806	na
+scaffold_30	unplaced-scaffold	na	na	JACYVU010000588.1	=	NW_023637730.1	Primary Assembly	3527	na
+scaffold_31	unplaced-scaffold	na	na	JACYVU010000589.1	=	NW_023637731.1	Primary Assembly	36943	na
+scaffold_32	unplaced-scaffold	na	na	JACYVU010000590.1	=	NW_023637732.1	Primary Assembly	59774	na
+scaffold_34	unplaced-scaffold	na	na	JACYVU010000595.1	=	NW_023637734.1	Primary Assembly	55443	na
+scaffold_35	unplaced-scaffold	na	na	JACYVU010000596.1	=	NW_023637735.1	Primary Assembly	55703	na
+scaffold_36	unplaced-scaffold	na	na	JACYVU010000597.1	=	NW_023637736.1	Primary Assembly	55030	na
+scaffold_37	unplaced-scaffold	na	na	JACYVU010000598.1	=	NW_023637737.1	Primary Assembly	54054	na
+scaffold_38	unplaced-scaffold	na	na	JACYVU010000599.1	=	NW_023637738.1	Primary Assembly	52490	na
+scaffold_39	unplaced-scaffold	na	na	JACYVU010000600.1	=	NW_023637739.1	Primary Assembly	52429	na
+scaffold_40	unplaced-scaffold	na	na	JACYVU010000601.1	=	NW_023637740.1	Primary Assembly	53477	na
+scaffold_41	unplaced-scaffold	na	na	JACYVU010000602.1	=	NW_023637741.1	Primary Assembly	51231	na
+scaffold_42	unplaced-scaffold	na	na	JACYVU010000603.1	=	NW_023637742.1	Primary Assembly	50135	na
+scaffold_43	unplaced-scaffold	na	na	JACYVU010000604.1	=	NW_023637743.1	Primary Assembly	48867	na
+scaffold_44	unplaced-scaffold	na	na	JACYVU010000605.1	=	NW_023637744.1	Primary Assembly	48649	na
+scaffold_45	unplaced-scaffold	na	na	JACYVU010000606.1	=	NW_023637745.1	Primary Assembly	47994	na
+scaffold_46	unplaced-scaffold	na	na	JACYVU010000607.1	=	NW_023637746.1	Primary Assembly	47167	na
+scaffold_47	unplaced-scaffold	na	na	JACYVU010000608.1	=	NW_023637747.1	Primary Assembly	46828	na
+scaffold_48	unplaced-scaffold	na	na	JACYVU010000609.1	=	NW_023637748.1	Primary Assembly	44754	na
+scaffold_49	unplaced-scaffold	na	na	JACYVU010000610.1	=	NW_023637749.1	Primary Assembly	44011	na
+scaffold_50	unplaced-scaffold	na	na	JACYVU010000611.1	=	NW_023637750.1	Primary Assembly	43227	na
+scaffold_51	unplaced-scaffold	na	na	JACYVU010000612.1	=	NW_023637751.1	Primary Assembly	42710	na
+scaffold_52	unplaced-scaffold	na	na	JACYVU010000613.1	=	NW_023637752.1	Primary Assembly	42392	na
+scaffold_53	unplaced-scaffold	na	na	JACYVU010000614.1	=	NW_023637753.1	Primary Assembly	41807	na
+scaffold_56	unplaced-scaffold	na	na	JACYVU010000619.1	=	NW_023637756.1	Primary Assembly	39806	na
+scaffold_57	unplaced-scaffold	na	na	JACYVU010000620.1	=	NW_023637757.1	Primary Assembly	39355	na
+scaffold_58	unplaced-scaffold	na	na	JACYVU010000621.1	=	NW_023637758.1	Primary Assembly	38789	na
+scaffold_59	unplaced-scaffold	na	na	JACYVU010000622.1	=	NW_023637759.1	Primary Assembly	38316	na
+scaffold_60	unplaced-scaffold	na	na	JACYVU010000623.1	=	NW_023637760.1	Primary Assembly	37756	na
+scaffold_61	unplaced-scaffold	na	na	JACYVU010000624.1	=	NW_023637761.1	Primary Assembly	37900	na
+scaffold_62	unplaced-scaffold	na	na	JACYVU010000625.1	=	NW_023637762.1	Primary Assembly	37835	na
+scaffold_63	unplaced-scaffold	na	na	JACYVU010000626.1	=	NW_023637763.1	Primary Assembly	37503	na
+scaffold_65	unplaced-scaffold	na	na	JACYVU010000629.1	=	NW_023637765.1	Primary Assembly	36674	na
+scaffold_66	unplaced-scaffold	na	na	JACYVU010000630.1	=	NW_023637766.1	Primary Assembly	36093	na
+scaffold_67	unplaced-scaffold	na	na	JACYVU010000631.1	=	NW_023637767.1	Primary Assembly	35514	na
+scaffold_68	unplaced-scaffold	na	na	JACYVU010000632.1	=	NW_023637768.1	Primary Assembly	35635	na
+scaffold_69	unplaced-scaffold	na	na	JACYVU010000633.1	=	NW_023637769.1	Primary Assembly	35019	na
+scaffold_70	unplaced-scaffold	na	na	JACYVU010000634.1	=	NW_023637770.1	Primary Assembly	34854	na
+scaffold_71	unplaced-scaffold	na	na	JACYVU010000635.1	=	NW_023637771.1	Primary Assembly	34273	na
+scaffold_72	unplaced-scaffold	na	na	JACYVU010000636.1	=	NW_023637772.1	Primary Assembly	34141	na
+scaffold_73	unplaced-scaffold	na	na	JACYVU010000637.1	=	NW_023637773.1	Primary Assembly	32456	na
+scaffold_74	unplaced-scaffold	na	na	JACYVU010000638.1	=	NW_023637774.1	Primary Assembly	31866	na
+scaffold_75	unplaced-scaffold	na	na	JACYVU010000639.1	=	NW_023637775.1	Primary Assembly	31814	na
+scaffold_76	unplaced-scaffold	na	na	JACYVU010000640.1	=	NW_023637776.1	Primary Assembly	30923	na
+scaffold_77	unplaced-scaffold	na	na	JACYVU010000641.1	=	NW_023637777.1	Primary Assembly	30905	na
+scaffold_78	unplaced-scaffold	na	na	JACYVU010000642.1	=	NW_023637778.1	Primary Assembly	30536	na
+scaffold_79	unplaced-scaffold	na	na	JACYVU010000643.1	=	NW_023637779.1	Primary Assembly	30026	na
+scaffold_80	unplaced-scaffold	na	na	JACYVU010000644.1	=	NW_023637780.1	Primary Assembly	29614	na
+scaffold_81	unplaced-scaffold	na	na	JACYVU010000645.1	=	NW_023637781.1	Primary Assembly	29394	na
+scaffold_82	unplaced-scaffold	na	na	JACYVU010000646.1	=	NW_023637782.1	Primary Assembly	29369	na
+scaffold_83	unplaced-scaffold	na	na	JACYVU010000647.1	=	NW_023637783.1	Primary Assembly	28870	na
+scaffold_84	unplaced-scaffold	na	na	JACYVU010000648.1	=	NW_023637784.1	Primary Assembly	28513	na
+scaffold_85	unplaced-scaffold	na	na	JACYVU010000649.1	=	NW_023637785.1	Primary Assembly	27249	na
+scaffold_87	unplaced-scaffold	na	na	JACYVU010000652.1	=	NW_023637787.1	Primary Assembly	25016	na
+scaffold_88	unplaced-scaffold	na	na	JACYVU010000653.1	=	NW_023637788.1	Primary Assembly	24935	na
+scaffold_89	unplaced-scaffold	na	na	JACYVU010000654.1	=	NW_023637789.1	Primary Assembly	24820	na
+scaffold_90	unplaced-scaffold	na	na	JACYVU010000655.1	=	NW_023637790.1	Primary Assembly	24952	na
+scaffold_92	unplaced-scaffold	na	na	JACYVU010000658.1	=	NW_023637792.1	Primary Assembly	23476	na
+scaffold_94	unplaced-scaffold	na	na	JACYVU010000661.1	=	NW_023637794.1	Primary Assembly	22722	na
+scaffold_95	unplaced-scaffold	na	na	JACYVU010000662.1	=	NW_023637795.1	Primary Assembly	22560	na
+scaffold_96	unplaced-scaffold	na	na	JACYVU010000663.1	=	NW_023637796.1	Primary Assembly	19399	na
+scaffold_97	unplaced-scaffold	na	na	JACYVU010000664.1	=	NW_023637797.1	Primary Assembly	17659	na
+scaffold_98	unplaced-scaffold	na	na	JACYVU010000665.1	=	NW_023637798.1	Primary Assembly	16920	na
+scaffold_100	unplaced-scaffold	na	na	JACYVU010000668.1	=	NW_023637800.1	Primary Assembly	12850	na
+scaffold_101	unplaced-scaffold	na	na	JACYVU010000669.1	=	NW_023637801.1	Primary Assembly	12585	na
+scaffold_102	unplaced-scaffold	na	na	JACYVU010000670.1	=	NW_023637802.1	Primary Assembly	11983	na
+scaffold_103	unplaced-scaffold	na	na	JACYVU010000671.1	=	NW_023637803.1	Primary Assembly	11810	na
+scaffold_105	unplaced-scaffold	na	na	JACYVU010000674.1	=	NW_023637805.1	Primary Assembly	10867	na
+scaffold_106	unplaced-scaffold	na	na	JACYVU010000675.1	=	NW_023637806.1	Primary Assembly	10646	na
+scaffold_107	unplaced-scaffold	na	na	JACYVU010000676.1	=	NW_023637807.1	Primary Assembly	10060	na
+scaffold_108	unplaced-scaffold	na	na	JACYVU010000677.1	=	NW_023637808.1	Primary Assembly	9310	na
+scaffold_109	unplaced-scaffold	na	na	JACYVU010000678.1	=	NW_023637809.1	Primary Assembly	8567	na
+scaffold_110	unplaced-scaffold	na	na	JACYVU010000679.1	=	NW_023637810.1	Primary Assembly	8270	na
+scaffold_111	unplaced-scaffold	na	na	JACYVU010000680.1	=	NW_023637811.1	Primary Assembly	8066	na
+scaffold_112	unplaced-scaffold	na	na	JACYVU010000681.1	=	NW_023637812.1	Primary Assembly	7648	na
+scaffold_113	unplaced-scaffold	na	na	JACYVU010000682.1	=	NW_023637813.1	Primary Assembly	7188	na
+scaffold_117	unplaced-scaffold	na	na	JACYVU010000689.1	=	NW_023637817.1	Primary Assembly	5450	na
+scaffold_118	unplaced-scaffold	na	na	JACYVU010000690.1	=	NW_023637818.1	Primary Assembly	3849	na
+scaffold_120	unplaced-scaffold	na	na	JACYVU010000693.1	=	NW_023637820.1	Primary Assembly	3570	na
+scaffold_122	unplaced-scaffold	na	na	JACYVU010000696.1	=	NW_023637822.1	Primary Assembly	3310	na
+scaffold_124	unplaced-scaffold	na	na	JACYVU010000699.1	=	NW_023637824.1	Primary Assembly	2119	na
+scaffold_125	unplaced-scaffold	na	na	JACYVU010000700.1	=	NW_023637825.1	Primary Assembly	1272	na
+scaffold_126	unplaced-scaffold	na	na	JACYVU010000701.1	=	NW_023637826.1	Primary Assembly	972	na
+scaffold_127	unplaced-scaffold	na	na	JACYVU010000702.1	=	NW_023637827.1	Primary Assembly	779	na
+scaffold_128	unplaced-scaffold	na	na	JACYVU010000703.1	=	NW_023637828.1	Primary Assembly	746	na
+scaffold_129	unplaced-scaffold	na	na	JACYVU010000704.1	=	NW_023637829.1	Primary Assembly	118324	na
+scaffold_130	unplaced-scaffold	na	na	JACYVU010000705.1	=	NW_023637830.1	Primary Assembly	299950	na
+scaffold_131	unplaced-scaffold	na	na	JACYVU010000706.1	=	NW_023637831.1	Primary Assembly	287783	na
+scaffold_132	unplaced-scaffold	na	na	JACYVU010000707.1	=	NW_023637832.1	Primary Assembly	267602	na
+scaffold_140	unplaced-scaffold	na	na	JACYVU010000727.1	=	NW_023637840.1	Primary Assembly	109622	na
+scaffold_141	unplaced-scaffold	na	na	JACYVU010000728.1	=	NW_023637841.1	Primary Assembly	102432	na
+scaffold_143	unplaced-scaffold	na	na	JACYVU010000731.1	=	NW_023637843.1	Primary Assembly	97491	na
+scaffold_144	unplaced-scaffold	na	na	JACYVU010000732.1	=	NW_023637844.1	Primary Assembly	94865	na
+scaffold_146	unplaced-scaffold	na	na	JACYVU010000735.1	=	NW_023637846.1	Primary Assembly	92577	na
+scaffold_147	unplaced-scaffold	na	na	JACYVU010000736.1	=	NW_023637847.1	Primary Assembly	91108	na
+scaffold_148	unplaced-scaffold	na	na	JACYVU010000737.1	=	NW_023637848.1	Primary Assembly	90477	na
+scaffold_149	unplaced-scaffold	na	na	JACYVU010000738.1	=	NW_023637849.1	Primary Assembly	90482	na
+scaffold_150	unplaced-scaffold	na	na	JACYVU010000739.1	=	NW_023637850.1	Primary Assembly	89891	na
+scaffold_151	unplaced-scaffold	na	na	JACYVU010000740.1	=	NW_023637851.1	Primary Assembly	86921	na
+scaffold_153	unplaced-scaffold	na	na	JACYVU010000743.1	=	NW_023637853.1	Primary Assembly	76773	na
+scaffold_154	unplaced-scaffold	na	na	JACYVU010000744.1	=	NW_023637854.1	Primary Assembly	75943	na
+scaffold_157	unplaced-scaffold	na	na	JACYVU010000749.1	=	NW_023637857.1	Primary Assembly	69993	na
+scaffold_158	unplaced-scaffold	na	na	JACYVU010000750.1	=	NW_023637858.1	Primary Assembly	69855	na
+scaffold_160	unplaced-scaffold	na	na	JACYVU010000753.1	=	NW_023637860.1	Primary Assembly	67574	na
+scaffold_161	unplaced-scaffold	na	na	JACYVU010000754.1	=	NW_023637861.1	Primary Assembly	66861	na
+scaffold_162	unplaced-scaffold	na	na	JACYVU010000755.1	=	NW_023637862.1	Primary Assembly	62367	na
+scaffold_163	unplaced-scaffold	na	na	JACYVU010000756.1	=	NW_023637863.1	Primary Assembly	62110	na
+scaffold_23	unplaced-scaffold	na	na	MU150194.1	=	NW_023637723.1	Primary Assembly	648519	na
+scaffold_24	unplaced-scaffold	na	na	MU150195.1	=	NW_023637724.1	Primary Assembly	529129	na
+scaffold_25	unplaced-scaffold	na	na	MU150196.1	=	NW_023637725.1	Primary Assembly	333848	na
+scaffold_26	unplaced-scaffold	na	na	MU150197.1	=	NW_023637726.1	Primary Assembly	318964	na
+scaffold_27	unplaced-scaffold	na	na	MU150198.1	=	NW_023637727.1	Primary Assembly	241438	na
+scaffold_28	unplaced-scaffold	na	na	MU150199.1	=	NW_023637728.1	Primary Assembly	231725	na
+scaffold_33	unplaced-scaffold	na	na	MU150200.1	=	NW_023637733.1	Primary Assembly	58986	na
+scaffold_54	unplaced-scaffold	na	na	MU150201.1	=	NW_023637754.1	Primary Assembly	41029	na
+scaffold_55	unplaced-scaffold	na	na	MU150202.1	=	NW_023637755.1	Primary Assembly	40107	na
+scaffold_64	unplaced-scaffold	na	na	MU150203.1	=	NW_023637764.1	Primary Assembly	37612	na
+scaffold_86	unplaced-scaffold	na	na	MU150204.1	=	NW_023637786.1	Primary Assembly	27089	na
+scaffold_91	unplaced-scaffold	na	na	MU150205.1	=	NW_023637791.1	Primary Assembly	23654	na
+scaffold_93	unplaced-scaffold	na	na	MU150206.1	=	NW_023637793.1	Primary Assembly	23161	na
+scaffold_99	unplaced-scaffold	na	na	MU150207.1	=	NW_023637799.1	Primary Assembly	14320	na
+scaffold_104	unplaced-scaffold	na	na	MU150208.1	=	NW_023637804.1	Primary Assembly	11854	na
+scaffold_114	unplaced-scaffold	na	na	MU150209.1	=	NW_023637814.1	Primary Assembly	6125	na
+scaffold_115	unplaced-scaffold	na	na	MU150210.1	=	NW_023637815.1	Primary Assembly	5684	na
+scaffold_116	unplaced-scaffold	na	na	MU150211.1	=	NW_023637816.1	Primary Assembly	5530	na
+scaffold_119	unplaced-scaffold	na	na	MU150212.1	=	NW_023637819.1	Primary Assembly	3655	na
+scaffold_121	unplaced-scaffold	na	na	MU150213.1	=	NW_023637821.1	Primary Assembly	3369	na
+scaffold_123	unplaced-scaffold	na	na	MU150214.1	=	NW_023637823.1	Primary Assembly	3242	na
+scaffold_133	unplaced-scaffold	na	na	MU150215.1	=	NW_023637833.1	Primary Assembly	201039	na
+scaffold_134	unplaced-scaffold	na	na	MU150216.1	=	NW_023637834.1	Primary Assembly	159729	na
+scaffold_135	unplaced-scaffold	na	na	MU150217.1	=	NW_023637835.1	Primary Assembly	152829	na
+scaffold_136	unplaced-scaffold	na	na	MU150218.1	=	NW_023637836.1	Primary Assembly	149942	na
+scaffold_137	unplaced-scaffold	na	na	MU150219.1	=	NW_023637837.1	Primary Assembly	135739	na
+scaffold_138	unplaced-scaffold	na	na	MU150220.1	=	NW_023637838.1	Primary Assembly	123749	na
+scaffold_139	unplaced-scaffold	na	na	MU150221.1	=	NW_023637839.1	Primary Assembly	113378	na
+scaffold_142	unplaced-scaffold	na	na	MU150222.1	=	NW_023637842.1	Primary Assembly	100634	na
+scaffold_145	unplaced-scaffold	na	na	MU150223.1	=	NW_023637845.1	Primary Assembly	94425	na
+scaffold_152	unplaced-scaffold	na	na	MU150224.1	=	NW_023637852.1	Primary Assembly	80668	na
+scaffold_155	unplaced-scaffold	na	na	MU150225.1	=	NW_023637855.1	Primary Assembly	72661	na
+scaffold_156	unplaced-scaffold	na	na	MU150226.1	=	NW_023637856.1	Primary Assembly	70979	na
+scaffold_159	unplaced-scaffold	na	na	MU150227.1	=	NW_023637859.1	Primary Assembly	68744	na
+MT	assembled-molecule	MT	Mitochondrion	AY172581.1	=	NC_001665.2	non-nuclear	16313	chrM

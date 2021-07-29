@@ -1,0 +1,358 @@
+# Assembly name:  mOrnAna1.pri.v4
+# Organism name:  Ornithorhynchus anatinus (platypus)
+# Isolate:  Pmale09
+# Sex:  male
+# Taxid:          9258
+# BioSample:      SAMN08537700
+# BioProject:     PRJNA489114
+# Submitter:      Vertebrate Genomes Project
+# Date:           2020-11-06
+# Assembly type:  haploid (principal pseudohaplotype of diploid)
+# Release type:   major
+# Assembly level: Chromosome
+# Genome representation: full
+# WGS project:    RZJT02
+# Assembly method: FALCON v. 5.1.1; FALCON Unzip v. 1.0.2; purge_haplotigs v. bit 7.10.2018; scaff10X v. git 4.28.2018; Bionano Solve DLS v. 3.2.1; Salsa2 HiC v. 2.0; smrtanalysis Arrow polishing & gap fillingt v. 5.1.0.26412; longranger align v. 2.2.2; freebayes v. 1.2.0; gEVAL manual curation v. 2019-12-06
+# Expected final version: no
+# Genome coverage: 58.8x
+# Sequencing technology: PacBio RSII; 10X Genomics linked reads; Bionano Genomics DLS; Dovetail Genomics HiC; Arima Genomics
+# RefSeq category: Representative Genome
+# GenBank assembly accession: GCA_004115215.4
+# RefSeq assembly accession: GCF_004115215.2
+# RefSeq assembly and GenBank assemblies identical: no
+# Linked assembly: GCA_008822115.3 (alternate pseudohaplotype of diploid)
+#
+## Assembly-Units:
+## GenBank Unit Accession	RefSeq Unit Accession	Assembly-Unit name
+## GCA_004115275.3	GCF_004115275.2	Primary Assembly
+## GCA_005475405.2	GCF_000184245.1	non-nuclear
+#
+# Ordered by chromosome/plasmid; the chromosomes/plasmids are followed by
+# unlocalized scaffolds.
+# Unplaced scaffolds are listed at the end.
+# RefSeq is equal or derived from GenBank object.
+#
+# Sequence-Name	Sequence-Role	Assigned-Molecule	Assigned-Molecule-Location/Type	GenBank-Accn	Relationship	RefSeq-Accn	Assembly-Unit	Sequence-Length	UCSC-style-name
+Super_Scaffold_1	assembled-molecule	1	Chromosome	CM014200.1	=	NC_041728.1	Primary Assembly	186506016	na
+Super_Scaffold_2	assembled-molecule	2	Chromosome	CM014201.1	=	NC_041729.1	Primary Assembly	171719663	na
+Super_Scaffold_3	assembled-molecule	3	Chromosome	CM014202.1	=	NC_041730.1	Primary Assembly	141987082	na
+Super_Scaffold_4	assembled-molecule	4	Chromosome	CM014203.1	=	NC_041731.1	Primary Assembly	136094389	na
+Super_Scaffold_5	assembled-molecule	5	Chromosome	CM014204.1	=	NC_041732.1	Primary Assembly	110293030	na
+Super_Scaffold_6	assembled-molecule	6	Chromosome	CM014205.1	=	NC_041733.1	Primary Assembly	51493492	na
+Super_Scaffold_7	assembled-molecule	7	Chromosome	CM014206.1	=	NC_041734.1	Primary Assembly	83338043	na
+Super_Scaffold_8	assembled-molecule	8	Chromosome	CM014207.1	=	NC_041735.1	Primary Assembly	70949814	na
+Super_Scaffold_9	assembled-molecule	9	Chromosome	CM014208.1	=	NC_041736.1	Primary Assembly	61861223	na
+Super_Scaffold_10	assembled-molecule	10	Chromosome	CM014209.1	=	NC_041737.1	Primary Assembly	59444696	na
+Super_Scaffold_11	assembled-molecule	11	Chromosome	CM014210.1	=	NC_041738.1	Primary Assembly	63506031	na
+Super_Scaffold_12	assembled-molecule	12	Chromosome	CM014211.1	=	NC_041739.1	Primary Assembly	60456049	na
+Super_Scaffold_13	assembled-molecule	13	Chromosome	CM014212.1	=	NC_041740.1	Primary Assembly	42294642	na
+Super_Scaffold_14	assembled-molecule	14	Chromosome	CM014213.1	=	NC_041741.1	Primary Assembly	52889406	na
+Super_Scaffold_15	assembled-molecule	15	Chromosome	CM014214.1	=	NC_041742.1	Primary Assembly	26375019	na
+Super_Scaffold_16	assembled-molecule	16	Chromosome	CM014215.1	=	NC_041743.1	Primary Assembly	46397275	na
+Super_Scaffold_17	assembled-molecule	17	Chromosome	CM014216.1	=	NC_041744.1	Primary Assembly	45536670	na
+Super_Scaffold_18	assembled-molecule	18	Chromosome	CM014217.1	=	NC_041745.1	Primary Assembly	44684501	na
+Super_Scaffold_19	assembled-molecule	19	Chromosome	CM014218.1	=	NC_041746.1	Primary Assembly	35120541	na
+Super_Scaffold_20	assembled-molecule	20	Chromosome	CM014219.1	=	NC_041747.1	Primary Assembly	30535534	na
+Super_Scaffold_21	assembled-molecule	21	Chromosome	CM014220.1	=	NC_041748.1	Primary Assembly	24514859	na
+Super_Scaffold_X1	assembled-molecule	X1	Chromosome	CM014221.1	=	NC_041749.1	Primary Assembly	125040914	na
+Super_Scaffold_X2	assembled-molecule	X2	Chromosome	CM014222.1	=	NC_041750.1	Primary Assembly	29662106	na
+Super_Scaffold_X3	assembled-molecule	X3	Chromosome	CM014223.1	=	NC_041751.1	Primary Assembly	33863336	na
+Super_Scaffold_X4	assembled-molecule	X4	Chromosome	CM014224.1	=	NC_041752.1	Primary Assembly	8639456	na
+Super_Scaffold_X5	assembled-molecule	X5	Chromosome	CM014225.1	=	NC_041753.1	Primary Assembly	70139320	na
+Super_Scaffold_Y1	assembled-molecule	Y1	Chromosome	CM022557.1	=	NC_053175.1	Primary Assembly	1234000	na
+Super_Scaffold_Y2	assembled-molecule	Y2	Chromosome	CM026824.1	=	NC_053176.1	Primary Assembly	4600510	na
+Super_Scaffold_Y3	assembled-molecule	Y3	Chromosome	CM026825.1	=	NC_053177.1	Primary Assembly	2467712	na
+Super_Scaffold_Y4	assembled-molecule	Y4	Chromosome	CM022558.1	=	NC_053178.1	Primary Assembly	1018000	na
+scaffold_181_arrow_ctg1	assembled-molecule	Y5	Chromosome	CM026826.1	=	NC_053179.1	Primary Assembly	2211240	na
+scaffold_167_arrow_ctg1	unlocalized-scaffold	Y2	Chromosome	RZJT02000029.1	=	NW_024396657.1	Primary Assembly	28497	na
+scaffold_257_arrow_ctg1	unlocalized-scaffold	Y2	Chromosome	RZJT02000030.1	=	NW_024396658.1	Primary Assembly	26225	na
+scaffold_285_arrow_ctg1	unlocalized-scaffold	Y2	Chromosome	RZJT02000031.1	=	NW_024396660.1	Primary Assembly	61411	na
+scaffold_531_arrow_ctg1	unlocalized-scaffold	Y2	Chromosome	RZJT02000032.1	=	NW_024396664.1	Primary Assembly	44937	na
+scaffold_672_arrow_ctg1	unlocalized-scaffold	Y2	Chromosome	RZJT02000033.1	=	NW_024396666.1	Primary Assembly	158545	na
+scaffold_128_arrow_ctg1	unlocalized-scaffold	Y2	Chromosome	RZJT02000294.1	=	NW_024396656.1	Primary Assembly	20317	na
+scaffold_267_arrow_ctg1	unlocalized-scaffold	Y2	Chromosome	RZJT02000298.1	=	NW_024396659.1	Primary Assembly	28728	na
+scaffold_330_arrow_ctg1	unlocalized-scaffold	Y2	Chromosome	RZJT02000301.1	=	NW_024396661.1	Primary Assembly	20243	na
+scaffold_395_arrow_ctg1	unlocalized-scaffold	Y2	Chromosome	RZJT02000302.1	=	NW_024396662.1	Primary Assembly	54339	na
+scaffold_499_arrow_ctg1	unlocalized-scaffold	Y2	Chromosome	RZJT02000305.1	=	NW_024396663.1	Primary Assembly	14484	na
+scaffold_622_arrow_ctg1	unlocalized-scaffold	Y2	Chromosome	RZJT02000311.1	=	NW_024396665.1	Primary Assembly	109076	na
+scaffold_233_arrow_ctg1_1	unlocalized-scaffold	Y3	Chromosome	RZJT02000035.1	=	NW_024396667.1	Primary Assembly	294604	na
+scaffold_32_arrow_ctg1	unlocalized-scaffold	Y3	Chromosome	RZJT02000037.1	=	NW_024396668.1	Primary Assembly	77965	na
+scaffold_538_arrow_ctg1	unlocalized-scaffold	Y3	Chromosome	RZJT02000038.1	=	NW_024396669.1	Primary Assembly	21537	na
+Super_Scaffold_Y5	unlocalized-scaffold	Y5	Chromosome	RZJT02000041.1	=	NW_024396670.1	Primary Assembly	578393	na
+scaffold_229_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000034.1	=	NW_024396727.1	Primary Assembly	108975	na
+scaffold_269_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000036.1	=	NW_024396744.1	Primary Assembly	45778	na
+scaffold_105_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000042.1	=	NW_024396672.1	Primary Assembly	22077	na
+scaffold_10_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000043.1	=	NW_024396674.1	Primary Assembly	21560	na
+scaffold_110_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000044.1	=	NW_024396675.1	Primary Assembly	54713	na
+scaffold_111_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000045.1	=	NW_024396676.1	Primary Assembly	29734	na
+scaffold_120_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000046.1	=	NW_024396678.1	Primary Assembly	47469	na
+scaffold_121_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000047.1	=	NW_024396679.1	Primary Assembly	54403	na
+scaffold_133_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000048.1	=	NW_024396681.1	Primary Assembly	20825	na
+scaffold_138_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000049.1	=	NW_024396684.1	Primary Assembly	45456	na
+scaffold_139_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000050.1	=	NW_024396685.1	Primary Assembly	26726	na
+scaffold_142_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000051.1	=	NW_024396687.1	Primary Assembly	23939	na
+scaffold_14_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000052.1	=	NW_024396690.1	Primary Assembly	27293	na
+scaffold_153_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000053.1	=	NW_024396692.1	Primary Assembly	28511	na
+scaffold_155_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000054.1	=	NW_024396693.1	Primary Assembly	22156	na
+scaffold_157_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000055.1	=	NW_024396694.1	Primary Assembly	33195	na
+scaffold_166_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000056.1	=	NW_024396700.1	Primary Assembly	33743	na
+scaffold_170_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000057.1	=	NW_024396701.1	Primary Assembly	58652	na
+scaffold_175_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000058.1	=	NW_024396702.1	Primary Assembly	1280758	na
+scaffold_177_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000059.1	=	NW_024396703.1	Primary Assembly	101532	na
+scaffold_178_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000060.1	=	NW_024396704.1	Primary Assembly	53461	na
+scaffold_189_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000062.1	=	NW_024396707.1	Primary Assembly	49779	na
+scaffold_193_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000063.1	=	NW_024396708.1	Primary Assembly	33454	na
+scaffold_198_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000064.1	=	NW_024396709.1	Primary Assembly	23557	na
+scaffold_199_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000065.1	=	NW_024396710.1	Primary Assembly	25347	na
+scaffold_201_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000066.1	=	NW_024396712.1	Primary Assembly	23903	na
+scaffold_204_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000067.1	=	NW_024396714.1	Primary Assembly	23505	na
+scaffold_206_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000068.1	=	NW_024396716.1	Primary Assembly	24111	na
+scaffold_208_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000069.1	=	NW_024396718.1	Primary Assembly	32967	na
+scaffold_210_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000070.1	=	NW_024396719.1	Primary Assembly	75347	na
+scaffold_218_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000071.1	=	NW_024396721.1	Primary Assembly	92095	na
+scaffold_219_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000072.1	=	NW_024396722.1	Primary Assembly	27015	na
+scaffold_222_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000073.1	=	NW_024396723.1	Primary Assembly	33590	na
+scaffold_224_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000074.1	=	NW_024396724.1	Primary Assembly	1737721	na
+scaffold_225_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000075.1	=	NW_024396725.1	Primary Assembly	883485	na
+scaffold_226_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000076.1	=	NW_024396726.1	Primary Assembly	49974	na
+scaffold_22_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000077.1	=	NW_024396728.1	Primary Assembly	66691	na
+scaffold_232_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000078.1	=	NW_024396729.1	Primary Assembly	95495	na
+scaffold_233_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000079.1	=	NW_024396730.1	Primary Assembly	625818	na
+scaffold_243_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000080.1	=	NW_024396734.1	Primary Assembly	28236	na
+scaffold_244_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000081.1	=	NW_024396735.1	Primary Assembly	40268	na
+scaffold_24_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000082.1	=	NW_024396736.1	Primary Assembly	214698	na
+scaffold_254_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000083.1	=	NW_024396737.1	Primary Assembly	37320	na
+scaffold_258_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000084.1	=	NW_024396739.1	Primary Assembly	45262	na
+scaffold_261_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000085.1	=	NW_024396740.1	Primary Assembly	23910	na
+scaffold_263_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000086.1	=	NW_024396742.1	Primary Assembly	53324	na
+scaffold_264_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000087.1	=	NW_024396743.1	Primary Assembly	4208362	na
+scaffold_275_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000088.1	=	NW_024396746.1	Primary Assembly	37780	na
+scaffold_276_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000089.1	=	NW_024396747.1	Primary Assembly	47510	na
+scaffold_278_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000090.1	=	NW_024396748.1	Primary Assembly	35459	na
+scaffold_279_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000091.1	=	NW_024396749.1	Primary Assembly	56046	na
+scaffold_284_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000092.1	=	NW_024396752.1	Primary Assembly	59812	na
+scaffold_286_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000093.1	=	NW_024396753.1	Primary Assembly	37163	na
+scaffold_28_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000094.1	=	NW_024396754.1	Primary Assembly	47919	na
+scaffold_295_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000095.1	=	NW_024396756.1	Primary Assembly	37592	na
+scaffold_298_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000096.1	=	NW_024396757.1	Primary Assembly	23510	na
+scaffold_2_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000097.1	=	NW_024396758.1	Primary Assembly	44649	na
+scaffold_301_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000098.1	=	NW_024396759.1	Primary Assembly	23655	na
+scaffold_304_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000099.1	=	NW_024396761.1	Primary Assembly	22216	na
+scaffold_309_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000100.1	=	NW_024396762.1	Primary Assembly	22346	na
+scaffold_318_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000101.1	=	NW_024396763.1	Primary Assembly	23676	na
+scaffold_319_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000102.1	=	NW_024396764.1	Primary Assembly	47409	na
+scaffold_31_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000103.1	=	NW_024396765.1	Primary Assembly	39367	na
+scaffold_320_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000104.1	=	NW_024396766.1	Primary Assembly	49680	na
+scaffold_321_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000105.1	=	NW_024396767.1	Primary Assembly	27322	na
+scaffold_323_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000106.1	=	NW_024396768.1	Primary Assembly	40418	na
+scaffold_339_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000107.1	=	NW_024396775.1	Primary Assembly	32789	na
+scaffold_340_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000108.1	=	NW_024396776.1	Primary Assembly	35592	na
+scaffold_341_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000109.1	=	NW_024396777.1	Primary Assembly	71704	na
+scaffold_343_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000110.1	=	NW_024396778.1	Primary Assembly	25406	na
+scaffold_344_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000111.1	=	NW_024396779.1	Primary Assembly	741479	na
+scaffold_346_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000112.1	=	NW_024396780.1	Primary Assembly	43372	na
+scaffold_349_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000113.1	=	NW_024396781.1	Primary Assembly	20413	na
+scaffold_34_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000114.1	=	NW_024396782.1	Primary Assembly	328423	na
+scaffold_355_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000115.1	=	NW_024396783.1	Primary Assembly	46517	na
+scaffold_356_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000116.1	=	NW_024396784.1	Primary Assembly	59877	na
+scaffold_361_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000117.1	=	NW_024396786.1	Primary Assembly	29418	na
+scaffold_370_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000118.1	=	NW_024396790.1	Primary Assembly	56263	na
+scaffold_384_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000119.1	=	NW_024396794.1	Primary Assembly	58844	na
+scaffold_385_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000120.1	=	NW_024396795.1	Primary Assembly	73609	na
+scaffold_388_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000121.1	=	NW_024396797.1	Primary Assembly	24121	na
+scaffold_394_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000122.1	=	NW_024396799.1	Primary Assembly	22046	na
+scaffold_39_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000123.1	=	NW_024396802.1	Primary Assembly	237719	na
+scaffold_402_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000124.1	=	NW_024396803.1	Primary Assembly	30555	na
+scaffold_409_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000125.1	=	NW_024396806.1	Primary Assembly	24306	na
+scaffold_415_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000126.1	=	NW_024396809.1	Primary Assembly	174672	na
+scaffold_426_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000127.1	=	NW_024396813.1	Primary Assembly	30796	na
+scaffold_435_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000128.1	=	NW_024396816.1	Primary Assembly	24931	na
+scaffold_43_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000129.1	=	NW_024396819.1	Primary Assembly	37574	na
+scaffold_443_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000130.1	=	NW_024396820.1	Primary Assembly	20541	na
+scaffold_448_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000131.1	=	NW_024396821.1	Primary Assembly	50885	na
+scaffold_462_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000132.1	=	NW_024396824.1	Primary Assembly	459794	na
+scaffold_463_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000133.1	=	NW_024396825.1	Primary Assembly	31977	na
+scaffold_469_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000134.1	=	NW_024396827.1	Primary Assembly	42026	na
+scaffold_470_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000135.1	=	NW_024396829.1	Primary Assembly	62616	na
+scaffold_471_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000136.1	=	NW_024396830.1	Primary Assembly	24739	na
+scaffold_477_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000137.1	=	NW_024396833.1	Primary Assembly	36767	na
+scaffold_47_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000138.1	=	NW_024396834.1	Primary Assembly	52693	na
+scaffold_481_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000139.1	=	NW_024396835.1	Primary Assembly	421164	na
+scaffold_489_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000140.1	=	NW_024396838.1	Primary Assembly	20830	na
+scaffold_491_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000141.1	=	NW_024396840.1	Primary Assembly	32706	na
+scaffold_500_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000142.1	=	NW_024396842.1	Primary Assembly	49519	na
+scaffold_505_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000143.1	=	NW_024396843.1	Primary Assembly	29063	na
+scaffold_506_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000144.1	=	NW_024396844.1	Primary Assembly	46557	na
+scaffold_511_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000145.1	=	NW_024396847.1	Primary Assembly	29074	na
+scaffold_513_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000146.1	=	NW_024396848.1	Primary Assembly	27197	na
+scaffold_522_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000147.1	=	NW_024396851.1	Primary Assembly	28671	na
+scaffold_523_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000148.1	=	NW_024396852.1	Primary Assembly	22268	na
+scaffold_527_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000149.1	=	NW_024396853.1	Primary Assembly	21579	na
+scaffold_52_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000150.1	=	NW_024396854.1	Primary Assembly	35538	na
+scaffold_532_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000151.1	=	NW_024396855.1	Primary Assembly	33855	na
+scaffold_53_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000152.1	=	NW_024396858.1	Primary Assembly	46082	na
+scaffold_542_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000153.1	=	NW_024396859.1	Primary Assembly	22756	na
+scaffold_543_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000154.1	=	NW_024396860.1	Primary Assembly	47235	na
+scaffold_555_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000155.1	=	NW_024396863.1	Primary Assembly	28020	na
+scaffold_566_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000156.1	=	NW_024396866.1	Primary Assembly	50440	na
+scaffold_572_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000157.1	=	NW_024396868.1	Primary Assembly	51862	na
+scaffold_578_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000158.1	=	NW_024396870.1	Primary Assembly	85309	na
+scaffold_581_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000159.1	=	NW_024396873.1	Primary Assembly	43386	na
+scaffold_584_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000160.1	=	NW_024396875.1	Primary Assembly	33417	na
+scaffold_593_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000161.1	=	NW_024396876.1	Primary Assembly	24808	na
+scaffold_594_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000162.1	=	NW_024396877.1	Primary Assembly	28053	na
+scaffold_601_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000163.1	=	NW_024396880.1	Primary Assembly	33745	na
+scaffold_604_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000164.1	=	NW_024396881.1	Primary Assembly	56851	na
+scaffold_605_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000165.1	=	NW_024396882.1	Primary Assembly	32263	na
+scaffold_606_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000166.1	=	NW_024396883.1	Primary Assembly	30918	na
+scaffold_608_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000167.1	=	NW_024396884.1	Primary Assembly	228657	na
+scaffold_609_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000168.1	=	NW_024396885.1	Primary Assembly	37045	na
+scaffold_613_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000169.1	=	NW_024396887.1	Primary Assembly	55602	na
+scaffold_615_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000170.1	=	NW_024396888.1	Primary Assembly	826105	na
+scaffold_618_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000171.1	=	NW_024396889.1	Primary Assembly	27705	na
+scaffold_61_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000172.1	=	NW_024396890.1	Primary Assembly	43735	na
+scaffold_621_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000173.1	=	NW_024396892.1	Primary Assembly	154653	na
+scaffold_629_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000174.1	=	NW_024396896.1	Primary Assembly	21148	na
+scaffold_631_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000175.1	=	NW_024396898.1	Primary Assembly	28798	na
+scaffold_638_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000176.1	=	NW_024396899.1	Primary Assembly	29783	na
+scaffold_654_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000177.1	=	NW_024396904.1	Primary Assembly	22394	na
+scaffold_673_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000178.1	=	NW_024396909.1	Primary Assembly	30885	na
+scaffold_675_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000179.1	=	NW_024396911.1	Primary Assembly	46700	na
+scaffold_676_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000180.1	=	NW_024396912.1	Primary Assembly	31060	na
+scaffold_677_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000181.1	=	NW_024396913.1	Primary Assembly	11224	na
+scaffold_679_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000182.1	=	NW_024396914.1	Primary Assembly	29823	na
+scaffold_67_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000183.1	=	NW_024396915.1	Primary Assembly	25660	na
+scaffold_681_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000184.1	=	NW_024396916.1	Primary Assembly	25673	na
+scaffold_682_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000185.1	=	NW_024396917.1	Primary Assembly	177670	na
+scaffold_685_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000186.1	=	NW_024396919.1	Primary Assembly	23768	na
+scaffold_692_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000187.1	=	NW_024396922.1	Primary Assembly	23516	na
+scaffold_6_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000188.1	=	NW_024396925.1	Primary Assembly	25981	na
+scaffold_701_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000189.1	=	NW_024396926.1	Primary Assembly	28021	na
+scaffold_709_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000190.1	=	NW_024396928.1	Primary Assembly	50895	na
+scaffold_70_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000191.1	=	NW_024396929.1	Primary Assembly	40286	na
+scaffold_711_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000192.1	=	NW_024396930.1	Primary Assembly	42276	na
+scaffold_715_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000193.1	=	NW_024396931.1	Primary Assembly	23330	na
+scaffold_77_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000194.1	=	NW_024396934.1	Primary Assembly	1066450	na
+scaffold_79_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000195.1	=	NW_024396935.1	Primary Assembly	451795	na
+scaffold_80_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000196.1	=	NW_024396936.1	Primary Assembly	2989663	na
+scaffold_83_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000197.1	=	NW_024396938.1	Primary Assembly	39880	na
+scaffold_86_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000198.1	=	NW_024396939.1	Primary Assembly	40916	na
+scaffold_87_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000199.1	=	NW_024396940.1	Primary Assembly	36445	na
+scaffold_88_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000200.1	=	NW_024396941.1	Primary Assembly	743092	na
+scaffold_93_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000201.1	=	NW_024396943.1	Primary Assembly	2111105	na
+scaffold_98_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000202.1	=	NW_024396945.1	Primary Assembly	28551	na
+scaffold_104_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000203.1	=	NW_024396671.1	Primary Assembly	21253	na
+scaffold_109_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000204.1	=	NW_024396673.1	Primary Assembly	71141	na
+scaffold_114_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000205.1	=	NW_024396677.1	Primary Assembly	31757	na
+scaffold_124_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000206.1	=	NW_024396680.1	Primary Assembly	35637	na
+scaffold_135_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000207.1	=	NW_024396682.1	Primary Assembly	20379	na
+scaffold_136_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000208.1	=	NW_024396683.1	Primary Assembly	45841	na
+scaffold_13_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000209.1	=	NW_024396686.1	Primary Assembly	33166	na
+scaffold_143_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000210.1	=	NW_024396688.1	Primary Assembly	49223	na
+scaffold_151_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000211.1	=	NW_024396691.1	Primary Assembly	47769	na
+scaffold_158_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000212.1	=	NW_024396695.1	Primary Assembly	23641	na
+scaffold_159_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000213.1	=	NW_024396696.1	Primary Assembly	27988	na
+scaffold_160_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000214.1	=	NW_024396697.1	Primary Assembly	172643	na
+scaffold_161_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000215.1	=	NW_024396698.1	Primary Assembly	24924	na
+scaffold_184_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000216.1	=	NW_024396705.1	Primary Assembly	38709	na
+scaffold_185_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000217.1	=	NW_024396706.1	Primary Assembly	29400	na
+scaffold_202_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000218.1	=	NW_024396713.1	Primary Assembly	37825	na
+scaffold_215_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000219.1	=	NW_024396720.1	Primary Assembly	38593	na
+scaffold_237_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000220.1	=	NW_024396731.1	Primary Assembly	47728	na
+scaffold_239_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000221.1	=	NW_024396732.1	Primary Assembly	54864	na
+scaffold_256_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000222.1	=	NW_024396738.1	Primary Assembly	39829	na
+scaffold_27_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000223.1	=	NW_024396750.1	Primary Assembly	109976	na
+scaffold_283_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000224.1	=	NW_024396751.1	Primary Assembly	57137	na
+scaffold_293_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000225.1	=	NW_024396755.1	Primary Assembly	25603	na
+scaffold_324_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000226.1	=	NW_024396769.1	Primary Assembly	27404	na
+scaffold_325_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000227.1	=	NW_024396770.1	Primary Assembly	23319	na
+scaffold_333_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000228.1	=	NW_024396772.1	Primary Assembly	33949	na
+scaffold_337_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000229.1	=	NW_024396773.1	Primary Assembly	91705	na
+scaffold_338_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000230.1	=	NW_024396774.1	Primary Assembly	23910	na
+scaffold_357_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000231.1	=	NW_024396785.1	Primary Assembly	38011	na
+scaffold_364_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000232.1	=	NW_024396787.1	Primary Assembly	30793	na
+scaffold_366_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000233.1	=	NW_024396788.1	Primary Assembly	33849	na
+scaffold_367_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000234.1	=	NW_024396789.1	Primary Assembly	84485	na
+scaffold_375_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000235.1	=	NW_024396792.1	Primary Assembly	49082	na
+scaffold_378_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000236.1	=	NW_024396793.1	Primary Assembly	47008	na
+scaffold_386_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000237.1	=	NW_024396796.1	Primary Assembly	74550	na
+scaffold_389_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000238.1	=	NW_024396798.1	Primary Assembly	40622	na
+scaffold_396_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000239.1	=	NW_024396800.1	Primary Assembly	26822	na
+scaffold_398_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000240.1	=	NW_024396801.1	Primary Assembly	35551	na
+scaffold_411_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000241.1	=	NW_024396807.1	Primary Assembly	55847	na
+scaffold_421_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000242.1	=	NW_024396810.1	Primary Assembly	39259	na
+scaffold_424_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000243.1	=	NW_024396811.1	Primary Assembly	24282	na
+scaffold_42_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000244.1	=	NW_024396814.1	Primary Assembly	35047	na
+scaffold_434_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000245.1	=	NW_024396815.1	Primary Assembly	25426	na
+scaffold_437_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000246.1	=	NW_024396817.1	Primary Assembly	26266	na
+scaffold_439_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000247.1	=	NW_024396818.1	Primary Assembly	47326	na
+scaffold_452_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000248.1	=	NW_024396822.1	Primary Assembly	26835	na
+scaffold_456_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000249.1	=	NW_024396823.1	Primary Assembly	66142	na
+scaffold_46_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000250.1	=	NW_024396828.1	Primary Assembly	40510	na
+scaffold_472_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000251.1	=	NW_024396831.1	Primary Assembly	49578	na
+scaffold_474_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000252.1	=	NW_024396832.1	Primary Assembly	81155	na
+scaffold_48_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000253.1	=	NW_024396839.1	Primary Assembly	56961	na
+scaffold_50_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000254.1	=	NW_024396846.1	Primary Assembly	34973	na
+scaffold_51_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000255.1	=	NW_024396849.1	Primary Assembly	53436	na
+scaffold_520_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000256.1	=	NW_024396850.1	Primary Assembly	36849	na
+scaffold_535_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000257.1	=	NW_024396856.1	Primary Assembly	47540	na
+scaffold_539_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000258.1	=	NW_024396857.1	Primary Assembly	33819	na
+scaffold_548_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000259.1	=	NW_024396861.1	Primary Assembly	12133	na
+scaffold_561_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000260.1	=	NW_024396865.1	Primary Assembly	220726	na
+scaffold_577_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000261.1	=	NW_024396869.1	Primary Assembly	27161	na
+scaffold_582_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000262.1	=	NW_024396874.1	Primary Assembly	44022	na
+scaffold_596_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000263.1	=	NW_024396878.1	Primary Assembly	31455	na
+scaffold_5_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000264.1	=	NW_024396879.1	Primary Assembly	33366	na
+scaffold_624_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000265.1	=	NW_024396893.1	Primary Assembly	39797	na
+scaffold_628_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000266.1	=	NW_024396895.1	Primary Assembly	54187	na
+scaffold_642_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000267.1	=	NW_024396901.1	Primary Assembly	26316	na
+scaffold_646_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000268.1	=	NW_024396902.1	Primary Assembly	28507	na
+scaffold_651_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000269.1	=	NW_024396903.1	Primary Assembly	21767	na
+scaffold_658_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000270.1	=	NW_024396905.1	Primary Assembly	419772	na
+scaffold_65_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000271.1	=	NW_024396906.1	Primary Assembly	318822	na
+scaffold_660_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000272.1	=	NW_024396907.1	Primary Assembly	25063	na
+scaffold_684_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000273.1	=	NW_024396918.1	Primary Assembly	171066	na
+scaffold_686_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000274.1	=	NW_024396920.1	Primary Assembly	20348	na
+scaffold_687_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000275.1	=	NW_024396921.1	Primary Assembly	148102	na
+scaffold_694_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000276.1	=	NW_024396923.1	Primary Assembly	31012	na
+scaffold_708_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000277.1	=	NW_024396927.1	Primary Assembly	20529	na
+scaffold_75_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000278.1	=	NW_024396933.1	Primary Assembly	39077	na
+scaffold_82_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000279.1	=	NW_024396937.1	Primary Assembly	1397492	na
+scaffold_92_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000280.1	=	NW_024396942.1	Primary Assembly	32080	na
+scaffold_205_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000281.1	=	NW_024396715.1	Primary Assembly	21298	na
+scaffold_262_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000282.1	=	NW_024396741.1	Primary Assembly	40737	na
+scaffold_271_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000283.1	=	NW_024396745.1	Primary Assembly	32081	na
+scaffold_406_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000284.1	=	NW_024396804.1	Primary Assembly	22733	na
+scaffold_408_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000285.1	=	NW_024396805.1	Primary Assembly	55474	na
+scaffold_425_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000286.1	=	NW_024396812.1	Primary Assembly	32478	na
+scaffold_482_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000287.1	=	NW_024396836.1	Primary Assembly	29554	na
+scaffold_488_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000288.1	=	NW_024396837.1	Primary Assembly	26756	na
+scaffold_612_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000289.1	=	NW_024396886.1	Primary Assembly	41262	na
+scaffold_620_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000290.1	=	NW_024396891.1	Primary Assembly	35213	na
+scaffold_625_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000291.1	=	NW_024396894.1	Primary Assembly	32854	na
+scaffold_641_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000292.1	=	NW_024396900.1	Primary Assembly	23931	na
+scaffold_97_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000293.1	=	NW_024396944.1	Primary Assembly	20805	na
+scaffold_148_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000295.1	=	NW_024396689.1	Primary Assembly	42988	na
+scaffold_162_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000296.1	=	NW_024396699.1	Primary Assembly	25762	na
+scaffold_200_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000297.1	=	NW_024396711.1	Primary Assembly	33150	na
+scaffold_303_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000299.1	=	NW_024396760.1	Primary Assembly	36802	na
+scaffold_329_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000300.1	=	NW_024396771.1	Primary Assembly	73857	na
+scaffold_412_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000303.1	=	NW_024396808.1	Primary Assembly	24141	na
+scaffold_465_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000304.1	=	NW_024396826.1	Primary Assembly	41475	na
+scaffold_4_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000306.1	=	NW_024396841.1	Primary Assembly	21623	na
+scaffold_508_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000307.1	=	NW_024396845.1	Primary Assembly	28634	na
+scaffold_550_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000308.1	=	NW_024396862.1	Primary Assembly	25447	na
+scaffold_57_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000309.1	=	NW_024396871.1	Primary Assembly	22236	na
+scaffold_580_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000310.1	=	NW_024396872.1	Primary Assembly	45838	na
+scaffold_666_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000312.1	=	NW_024396908.1	Primary Assembly	35645	na
+scaffold_73_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000313.1	=	NW_024396932.1	Primary Assembly	39379	na
+scaffold_558_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000314.1	=	NW_024396864.1	Primary Assembly	31772	na
+scaffold_207_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000315.1	=	NW_024396717.1	Primary Assembly	455800	na
+scaffold_674_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000316.1	=	NW_024396910.1	Primary Assembly	50306	na
+scaffold_23_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000317.1	=	NW_024396733.1	Primary Assembly	36770	na
+scaffold_372_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000318.1	=	NW_024396791.1	Primary Assembly	49090	na
+scaffold_567_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000319.1	=	NW_024396867.1	Primary Assembly	48425	na
+scaffold_62_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000320.1	=	NW_024396897.1	Primary Assembly	34330	na
+scaffold_699_arrow_ctg1	unplaced-scaffold	na	na	RZJT02000321.1	=	NW_024396924.1	Primary Assembly	56616	na
+MT	assembled-molecule	MT	Mitochondrion	na	<>	NC_000891.1	non-nuclear	17019	na
+mOrnAna1_MT	assembled-molecule	MT	Mitochondrion	CM016609.2	<>	na	non-nuclear	16841	na

@@ -1,0 +1,134 @@
+# Assembly name:  mSarHar1.11
+# Organism name:  Sarcophilus harrisii (Tasmanian devil)
+# Taxid:          9305
+# BioSample:      SAMEA6099886
+# BioProject:     PRJEB35073
+# Submitter:      SC
+# Date:           2019-11-07
+# Assembly type:  haploid
+# Release type:   major
+# Assembly level: Chromosome
+# Genome representation: full
+# WGS project:    CACPPN01
+# Genome coverage: 88x
+# GenBank assembly accession: GCA_902635505.1
+# RefSeq assembly accession: GCF_902635505.1
+# RefSeq assembly and GenBank assemblies identical: no
+#
+## Assembly-Units:
+## GenBank Unit Accession	RefSeq Unit Accession	Assembly-Unit name
+## GCA_902635504.1	GCF_902635504.1	Primary Assembly
+## 	GCF_009769365.1	non-nuclear
+#
+# Ordered by chromosome/plasmid; the chromosomes/plasmids are followed by
+# unlocalized scaffolds.
+# Unplaced scaffolds are listed at the end.
+# RefSeq is equal or derived from GenBank object.
+#
+# Sequence-Name	Sequence-Role	Assigned-Molecule	Assigned-Molecule-Location/Type	GenBank-Accn	Relationship	RefSeq-Accn	Assembly-Unit	Sequence-Length	UCSC-style-name
+Super_scaffold_1	assembled-molecule	1	Chromosome	LR735554.1	=	NC_045426.1	Primary Assembly	716413629	na
+Super_scaffold_2	assembled-molecule	2	Chromosome	LR735555.1	=	NC_045427.1	Primary Assembly	662751787	na
+Super_scaffold_3	assembled-molecule	3	Chromosome	LR735556.1	=	NC_045428.1	Primary Assembly	611347268	na
+Super_scaffold_4	assembled-molecule	4	Chromosome	LR735557.1	=	NC_045429.1	Primary Assembly	464895054	na
+Super_scaffold_5	assembled-molecule	5	Chromosome	LR735558.1	=	NC_045430.1	Primary Assembly	288121652	na
+Super_scaffold_6	assembled-molecule	6	Chromosome	LR735559.1	=	NC_045431.1	Primary Assembly	254895979	na
+Super_scaffold_7	assembled-molecule	X	Chromosome	LR735560.1	=	NC_045432.1	Primary Assembly	83081154	na
+Super_scaffold_8	assembled-molecule	Y	Chromosome	LR735561.1	=	NC_045433.1	Primary Assembly	130564	na
+contig1	unplaced-scaffold	na	na	CACPPN010000001.1	=	NW_022290855.1	Primary Assembly	16627	na
+contig2	unplaced-scaffold	na	na	CACPPN010000002.1	=	NW_022290856.1	Primary Assembly	26184	na
+contig3	unplaced-scaffold	na	na	CACPPN010000003.1	=	NW_022290857.1	Primary Assembly	24838	na
+contig4	unplaced-scaffold	na	na	CACPPN010000004.1	=	NW_022290858.1	Primary Assembly	24596	na
+contig5	unplaced-scaffold	na	na	CACPPN010000005.1	=	NW_022290859.1	Primary Assembly	24593	na
+contig6	unplaced-scaffold	na	na	CACPPN010000006.1	=	NW_022290860.1	Primary Assembly	22086	na
+contig7	unplaced-scaffold	na	na	CACPPN010000007.1	=	NW_022290861.1	Primary Assembly	20815	na
+contig8	unplaced-scaffold	na	na	CACPPN010000008.1	=	NW_022290862.1	Primary Assembly	20455	na
+contig9	unplaced-scaffold	na	na	CACPPN010000009.1	=	NW_022290863.1	Primary Assembly	20281	na
+contig10	unplaced-scaffold	na	na	CACPPN010000010.1	=	NW_022290864.1	Primary Assembly	19080	na
+contig11	unplaced-scaffold	na	na	CACPPN010000011.1	=	NW_022290865.1	Primary Assembly	18197	na
+contig12	unplaced-scaffold	na	na	CACPPN010000012.1	=	NW_022290866.1	Primary Assembly	17625	na
+contig13	unplaced-scaffold	na	na	CACPPN010000013.1	=	NW_022290867.1	Primary Assembly	17096	na
+contig14	unplaced-scaffold	na	na	CACPPN010000014.1	=	NW_022290868.1	Primary Assembly	14681	na
+contig15	unplaced-scaffold	na	na	CACPPN010000015.1	=	NW_022290869.1	Primary Assembly	12250	na
+contig16	unplaced-scaffold	na	na	CACPPN010000016.1	=	NW_022290870.1	Primary Assembly	11902	na
+contig17	unplaced-scaffold	na	na	CACPPN010000017.1	=	NW_022290871.1	Primary Assembly	9883	na
+contig18	unplaced-scaffold	na	na	CACPPN010000018.1	=	NW_022290872.1	Primary Assembly	9314	na
+contig19	unplaced-scaffold	na	na	CACPPN010000019.1	=	NW_022290873.1	Primary Assembly	9109	na
+contig20	unplaced-scaffold	na	na	CACPPN010000020.1	=	NW_022290874.1	Primary Assembly	7935	na
+contig21	unplaced-scaffold	na	na	CACPPN010000021.1	=	NW_022290875.1	Primary Assembly	7908	na
+contig22	unplaced-scaffold	na	na	CACPPN010000022.1	=	NW_022290876.1	Primary Assembly	7164	na
+contig23	unplaced-scaffold	na	na	CACPPN010000023.1	=	NW_022290877.1	Primary Assembly	7074	na
+contig24	unplaced-scaffold	na	na	CACPPN010000024.1	=	NW_022290878.1	Primary Assembly	6617	na
+contig25	unplaced-scaffold	na	na	CACPPN010000025.1	=	NW_022290879.1	Primary Assembly	6004	na
+contig26	unplaced-scaffold	na	na	CACPPN010000026.1	=	NW_022290880.1	Primary Assembly	5732	na
+contig27	unplaced-scaffold	na	na	CACPPN010000027.1	=	NW_022290881.1	Primary Assembly	5647	na
+contig28	unplaced-scaffold	na	na	CACPPN010000028.1	=	NW_022290882.1	Primary Assembly	5325	na
+contig29	unplaced-scaffold	na	na	CACPPN010000029.1	=	NW_022290883.1	Primary Assembly	5256	na
+contig30	unplaced-scaffold	na	na	CACPPN010000030.1	=	NW_022290884.1	Primary Assembly	5048	na
+contig31	unplaced-scaffold	na	na	CACPPN010000031.1	=	NW_022290885.1	Primary Assembly	5026	na
+contig32	unplaced-scaffold	na	na	CACPPN010000032.1	=	NW_022290886.1	Primary Assembly	4983	na
+contig33	unplaced-scaffold	na	na	CACPPN010000033.1	=	NW_022290887.1	Primary Assembly	4796	na
+contig34	unplaced-scaffold	na	na	CACPPN010000034.1	=	NW_022290888.1	Primary Assembly	4758	na
+contig35	unplaced-scaffold	na	na	CACPPN010000035.1	=	NW_022290889.1	Primary Assembly	4580	na
+contig36	unplaced-scaffold	na	na	CACPPN010000036.1	=	NW_022290890.1	Primary Assembly	4279	na
+contig37	unplaced-scaffold	na	na	CACPPN010000037.1	=	NW_022290891.1	Primary Assembly	3815	na
+contig38	unplaced-scaffold	na	na	CACPPN010000038.1	=	NW_022290892.1	Primary Assembly	3532	na
+contig39	unplaced-scaffold	na	na	CACPPN010000039.1	=	NW_022290893.1	Primary Assembly	3164	na
+contig40	unplaced-scaffold	na	na	CACPPN010000040.1	=	NW_022290894.1	Primary Assembly	2679	na
+contig41	unplaced-scaffold	na	na	CACPPN010000041.1	=	NW_022290895.1	Primary Assembly	134888	na
+contig42	unplaced-scaffold	na	na	CACPPN010000042.1	=	NW_022290896.1	Primary Assembly	133465	na
+contig43	unplaced-scaffold	na	na	CACPPN010000043.1	=	NW_022290897.1	Primary Assembly	128831	na
+contig44	unplaced-scaffold	na	na	CACPPN010000044.1	=	NW_022290898.1	Primary Assembly	128479	na
+contig45	unplaced-scaffold	na	na	CACPPN010000045.1	=	NW_022290899.1	Primary Assembly	128295	na
+contig46	unplaced-scaffold	na	na	CACPPN010000046.1	=	NW_022290900.1	Primary Assembly	117474	na
+contig47	unplaced-scaffold	na	na	CACPPN010000047.1	=	NW_022290901.1	Primary Assembly	105851	na
+contig48	unplaced-scaffold	na	na	CACPPN010000048.1	=	NW_022290902.1	Primary Assembly	101212	na
+contig49	unplaced-scaffold	na	na	CACPPN010000049.1	=	NW_022290903.1	Primary Assembly	100770	na
+contig50	unplaced-scaffold	na	na	CACPPN010000050.1	=	NW_022290904.1	Primary Assembly	100561	na
+contig51	unplaced-scaffold	na	na	CACPPN010000051.1	=	NW_022290905.1	Primary Assembly	94086	na
+contig52	unplaced-scaffold	na	na	CACPPN010000052.1	=	NW_022290906.1	Primary Assembly	92219	na
+contig53	unplaced-scaffold	na	na	CACPPN010000053.1	=	NW_022290907.1	Primary Assembly	90813	na
+contig54	unplaced-scaffold	na	na	CACPPN010000054.1	=	NW_022290908.1	Primary Assembly	89579	na
+contig55	unplaced-scaffold	na	na	CACPPN010000055.1	=	NW_022290909.1	Primary Assembly	88594	na
+contig56	unplaced-scaffold	na	na	CACPPN010000056.1	=	NW_022290910.1	Primary Assembly	84910	na
+contig57	unplaced-scaffold	na	na	CACPPN010000057.1	=	NW_022290911.1	Primary Assembly	83894	na
+contig58	unplaced-scaffold	na	na	CACPPN010000058.1	=	NW_022290912.1	Primary Assembly	82522	na
+contig59	unplaced-scaffold	na	na	CACPPN010000059.1	=	NW_022290913.1	Primary Assembly	82155	na
+contig60	unplaced-scaffold	na	na	CACPPN010000060.1	=	NW_022290914.1	Primary Assembly	79920	na
+contig61	unplaced-scaffold	na	na	CACPPN010000061.1	=	NW_022290915.1	Primary Assembly	76515	na
+contig62	unplaced-scaffold	na	na	CACPPN010000062.1	=	NW_022290916.1	Primary Assembly	76375	na
+contig63	unplaced-scaffold	na	na	CACPPN010000063.1	=	NW_022290917.1	Primary Assembly	74955	na
+contig64	unplaced-scaffold	na	na	CACPPN010000064.1	=	NW_022290918.1	Primary Assembly	71088	na
+contig65	unplaced-scaffold	na	na	CACPPN010000065.1	=	NW_022290919.1	Primary Assembly	69485	na
+contig66	unplaced-scaffold	na	na	CACPPN010000066.1	=	NW_022290920.1	Primary Assembly	69155	na
+contig67	unplaced-scaffold	na	na	CACPPN010000067.1	=	NW_022290921.1	Primary Assembly	68774	na
+contig68	unplaced-scaffold	na	na	CACPPN010000068.1	=	NW_022290922.1	Primary Assembly	68593	na
+contig69	unplaced-scaffold	na	na	CACPPN010000069.1	=	NW_022290923.1	Primary Assembly	62847	na
+contig70	unplaced-scaffold	na	na	CACPPN010000070.1	=	NW_022290924.1	Primary Assembly	62644	na
+contig71	unplaced-scaffold	na	na	CACPPN010000071.1	=	NW_022290925.1	Primary Assembly	57784	na
+contig72	unplaced-scaffold	na	na	CACPPN010000072.1	=	NW_022290926.1	Primary Assembly	57235	na
+contig73	unplaced-scaffold	na	na	CACPPN010000073.1	=	NW_022290927.1	Primary Assembly	55854	na
+contig74	unplaced-scaffold	na	na	CACPPN010000074.1	=	NW_022290928.1	Primary Assembly	55758	na
+contig75	unplaced-scaffold	na	na	CACPPN010000075.1	=	NW_022290929.1	Primary Assembly	55752	na
+contig76	unplaced-scaffold	na	na	CACPPN010000076.1	=	NW_022290930.1	Primary Assembly	54301	na
+contig77	unplaced-scaffold	na	na	CACPPN010000077.1	=	NW_022290931.1	Primary Assembly	52991	na
+contig78	unplaced-scaffold	na	na	CACPPN010000078.1	=	NW_022290932.1	Primary Assembly	52548	na
+contig79	unplaced-scaffold	na	na	CACPPN010000079.1	=	NW_022290933.1	Primary Assembly	51773	na
+contig80	unplaced-scaffold	na	na	CACPPN010000080.1	=	NW_022290934.1	Primary Assembly	51884	na
+contig81	unplaced-scaffold	na	na	CACPPN010000081.1	=	NW_022290935.1	Primary Assembly	50504	na
+contig82	unplaced-scaffold	na	na	CACPPN010000082.1	=	NW_022290936.1	Primary Assembly	50073	na
+contig83	unplaced-scaffold	na	na	CACPPN010000083.1	=	NW_022290937.1	Primary Assembly	50025	na
+contig84	unplaced-scaffold	na	na	CACPPN010000084.1	=	NW_022290938.1	Primary Assembly	50030	na
+contig85	unplaced-scaffold	na	na	CACPPN010000085.1	=	NW_022290939.1	Primary Assembly	298274	na
+contig86	unplaced-scaffold	na	na	CACPPN010000086.1	=	NW_022290940.1	Primary Assembly	49923	na
+contig87	unplaced-scaffold	na	na	CACPPN010000087.1	=	NW_022290941.1	Primary Assembly	47277	na
+contig88	unplaced-scaffold	na	na	CACPPN010000088.1	=	NW_022290942.1	Primary Assembly	45561	na
+contig89	unplaced-scaffold	na	na	CACPPN010000089.1	=	NW_022290943.1	Primary Assembly	44600	na
+contig90	unplaced-scaffold	na	na	CACPPN010000090.1	=	NW_022290944.1	Primary Assembly	213043	na
+contig91	unplaced-scaffold	na	na	CACPPN010000091.1	=	NW_022290945.1	Primary Assembly	40613	na
+contig92	unplaced-scaffold	na	na	CACPPN010000092.1	=	NW_022290946.1	Primary Assembly	35812	na
+contig93	unplaced-scaffold	na	na	CACPPN010000093.1	=	NW_022290947.1	Primary Assembly	35561	na
+contig94	unplaced-scaffold	na	na	CACPPN010000094.1	=	NW_022290948.1	Primary Assembly	32745	na
+contig95	unplaced-scaffold	na	na	CACPPN010000095.1	=	NW_022290949.1	Primary Assembly	31299	na
+contig96	unplaced-scaffold	na	na	CACPPN010000096.1	=	NW_022290950.1	Primary Assembly	26685	na
+contig97	unplaced-scaffold	na	na	CACPPN010000097.1	=	NW_022290951.1	Primary Assembly	172450	na
+MT	assembled-molecule	MT	Mitochondrion	na	<>	NC_018788.1	non-nuclear	17117	na
