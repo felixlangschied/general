@@ -8,7 +8,7 @@ res_df = pd.read_csv(tp_path)
 has_tps = set(res_df['species'][res_df['True_positive'] == 'True'].values)
 print(has_tps)
 
-# res_df = res_df[res_df['species'] == 'Homo_sapiens']
+res_df = res_df[res_df['species'] == 'Homo_sapiens']
 
 worked_df = res_df[res_df['species'].isin(has_tps)]
 print(worked_df)
