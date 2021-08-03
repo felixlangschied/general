@@ -35,3 +35,5 @@ with open(all_path, 'r') as fh, open(out_path, 'w') as of:
         parsed_entry = '>' + entry.replace(db_abb, name)
         print(parsed_entry.strip())
         of.write(parsed_entry)
+
+# blastn -task megablast -query benchmark_mirgenedb.fa -db all_results -outfmt "6 std qcovhsp" -perc_identity 90 -qcov_hsp_perc 80 -out blastresults.txt
