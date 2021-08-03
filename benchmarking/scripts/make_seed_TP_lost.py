@@ -7,7 +7,7 @@ seed_out = "/share/project2/felix/ncOrtho/mirgenedb/TPbenchmark/seed_file.txt"
 
 
 ncortho_call = (
-    "ncSearch / "
+    "ncSearch "
     "-m /share/project/felixl/ncOrtho/data/mirGeneDB/coreset/output/CMs "
     "-n /share/project/felixl/ncOrtho/data/mirGeneDB/data/missing_TPs.tsv "
     "-o /share/project2/felix/ncOrtho/mirgenedb/TPbenchmark "
