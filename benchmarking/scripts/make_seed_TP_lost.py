@@ -7,15 +7,15 @@ seed_out = "/share/project2/felix/ncOrtho/mirgenedb/TPbenchmark/seed_file.txt"
 
 
 ncortho_call = (
-    "ncSearchcd / "
+    "ncSearch / "
     "-m /share/project/felixl/ncOrtho/data/mirGeneDB/coreset/output/CMs "
     "-n /share/project/felixl/ncOrtho/data/mirGeneDB/data/missing_TPs.tsv "
     "-o /share/project2/felix/ncOrtho/mirgenedb/TPbenchmark "
     "-q {0} "
     "-r /share/gluster/GeneSets/NCBI-Genomes/MammalianVertebratesRefSeq/raw_dir/active/GCF_000001405.39/genomic.fna "
-    "--refblast /share/project2/felix/ncOrtho/mirgenedb/05cutoff/Homo_sapiens/data/Homo_sapiens.fa"
-    "--cpu 4"
-    "--queryname {1}"
+    "--refblast /share/project2/felix/ncOrtho/mirgenedb/05cutoff/Homo_sapiens/data/Homo_sapiens.fa "
+    "--cpu 4 "
+    "--queryname {1} "
     "--queryblast /share/project2/felix/ncOrtho/mirgenedb/05cutoff/{1}/data/{1}.fa\n"
 )
 
