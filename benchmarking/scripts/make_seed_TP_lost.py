@@ -23,8 +23,7 @@ specs = []
 with open(spec_path, 'r') as fh:
     next(fh)
     for line in fh:
-        specs.append(line.split('\t'))
-print(specs)
+        specs.append(line.split('\t')[0])
 
 
 with open(table_path, 'r') as fh, open(seed_out, 'w') as of:
