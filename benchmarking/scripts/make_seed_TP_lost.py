@@ -16,7 +16,7 @@ ncortho_call = (
     "--refblast /share/project2/felix/ncOrtho/mirgenedb/05cutoff/Homo_sapiens/data/Homo_sapiens.fa "
     "--cpu 4 "
     "--queryname {1} "
-    "--queryblast /share/project2/felix/ncOrtho/mirgenedb/05cutoff/{1}/data/{1}.fa"
+    "--queryblast /share/project2/felix/ncOrtho/mirgenedb/05cutoff/{1}/data/{1}.fa "
     "--cleanup False\n"
 )
 
