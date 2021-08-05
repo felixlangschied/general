@@ -1,6 +1,6 @@
 import pandas as pd
 
-tp_path = r'C:\Users\felix\PycharmProjects\general\benchmarking\data\tp_results.csv'
+tp_path = r'/benchmarking/data/tp_results.csv'
 
 res_df = pd.read_csv(tp_path)
 # print(res_df)

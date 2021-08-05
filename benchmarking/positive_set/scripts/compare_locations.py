@@ -7,11 +7,11 @@ import glob
 # map_dir = '/home/felixl/PycharmProjects/general/benchmarking/data/chrom_map'
 # avail_path = '/home/felixl/PycharmProjects/general/benchmarking/data/available_specs.txt'
 
-loc_path = r'C:\Users\felix\PycharmProjects\general\benchmarking\data\mirgenedb_locations.json'
-res_path = r'C:\Users\felix\PycharmProjects\general\benchmarking\data\result_locations.json'
-map_dir = r'C:\Users\felix\PycharmProjects\general\benchmarking\data\chrom_map'
-avail_path = r'C:\Users\felix\PycharmProjects\general\benchmarking\data\available_specs.txt'
-map_file = r'C:\Users\felix\PycharmProjects\general\benchmarking\data\mapped_result_locations.csv'
+loc_path = r'/benchmarking/data/mirgenedb_locations.json'
+res_path = r'/benchmarking/data/result_locations.json'
+map_dir = r'/benchmarking/data/chrom_map'
+avail_path = r'/benchmarking/data/available_specs.txt'
+map_file = r'/benchmarking/data/mapped_result_locations.csv'
 tp_out = r'C:\Users\felix\PycharmProjects\general\benchmarking\data\tp_results.csv'
 
 
