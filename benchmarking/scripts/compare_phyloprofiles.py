@@ -1,4 +1,5 @@
 import pandas as pd
+import json
 
 # ortho_path = '/benchmarking/phylo_input/family_results_19specs.long'
 # mirgene_path = '/benchmarking/phylo_input/family_mirgenedb_19specs.long'
@@ -79,7 +80,8 @@ for col in five_summary.columns:
     is_mis = five_summary[col][five_summary[col] == -1.0]
     sum_dict[col] = sorted(list(is_mis.index))
 print(sum_dict)
-
+with open(f'{out_dir}/missing_fams_per_species.json', 'w') as of:
+    json.dump(sum_dict, of)
 
 # # cmsearch cutoff 0.6
 # ortho_df = fill_df(ortho_path, raw_df, with05=False)

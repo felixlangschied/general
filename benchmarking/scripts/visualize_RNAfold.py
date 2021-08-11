@@ -3,7 +3,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
 import numpy as np
+from scipy import stats
 
+# https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.stats.kstest.html
 
 def shorten(seq):
     if len(seq) > 80:
