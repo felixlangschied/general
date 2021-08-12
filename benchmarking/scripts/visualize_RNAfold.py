@@ -15,13 +15,14 @@ def shorten(seq):
 
 
 # json_path = r'C:\Users\felix\PycharmProjects\general\benchmarking\data\all05_RNAfold_results.txt'
-json_path = '/benchmarking/data/all05_RNAfold.json'
-six_path = '/benchmarking/data/all06_RNAfold.json'
-avail_path = '/benchmarking/data/present.txt'
-ref_path = '/benchmarking/data/reference_RNAfold.json'
-out_dir = '/benchmarking/data/rnafold_analysis'
-mouse_path = '/benchmarking/data/mmu_reference_RNAfold.json'
-mirbase_path = '/benchmarking/data/hsa_mirbase_RNAfold.json'
+json_path = '/home/felixl/PycharmProjects/general/benchmarking/data/all05_RNAfold.json'
+six_path = '/home/felixl/PycharmProjects/general/benchmarking/data/all06_RNAfold.json'
+avail_path = '/home/felixl/PycharmProjects/general/benchmarking/data/present.txt'
+ref_path = '/home/felixl/PycharmProjects/general/benchmarking/data/reference_RNAfold.json'
+out_dir = '/home/felixl/PycharmProjects/general/benchmarking/data/rnafold_analysis'
+mouse_path = '/home/felixl/PycharmProjects/general/benchmarking/data/mmu_reference_RNAfold.json'
+mirbase_path = '/home/felixl/PycharmProjects/general/benchmarking/data/hsa_mirbase_RNAfold.json'
+all_mirbase = '/home/felixl/PycharmProjects/general/benchmarking/data/all19_mirgenedb_rnafold'
 
 with open(json_path, 'r') as fh:
     sdict = json.load(fh)
@@ -36,6 +37,8 @@ with open(mirbase_path, 'r') as fh:
     mirbase_dict = json.load(fh)
 with open(six_path, 'r') as fh:
     six_dict = json.load(fh)
+with open(all_mirbase, 'r') as fh:
+    all_mir = json.load(fh)
 
 # initialize dataframes
 df = pd.DataFrame.from_dict(sdict)
@@ -47,6 +50,8 @@ mirbase_df = pd.DataFrame.from_dict(mirbase_dict)
 mirbase_df['score'] = pd.to_numeric(mirbase_df['score'])
 six_df = pd.DataFrame.from_dict(six_dict)
 six_df['score'] = pd.to_numeric(six_df['score'])
+all_mir_df = pd.DataFrame.from_dict(all_mir)
+all_mir_df['score'] = pd.to_numeric(all_mir_df['score'])
 print(df.columns)
 
 # analyze score column
@@ -96,14 +101,29 @@ filtered_six = six_df[six_df['score'] >= six_thres]
 # plt.title('Reference miRNAs')
 # plt.show()
 
-# distribution plot
+# # distribution plot
+# sns.kdeplot(data=all_mir_df, x='score')
+# sns.kdeplot(data=filtered_five, x='score')
+# sns.kdeplot(data=human, x='score')
+# sns.kdeplot(data=ref_df, x='score')
+# sns.kdeplot(data=mirbase_df, x='score')
+# sns.kdeplot(data=mmu_df, x='score')
+# plt.legend(['All mirGeneDB entries', 'All results (mirGeneDB)', 'Human ncOrtho results (mirGeneDB)', 'Human mirGeneDB miRNAs', 'Human miRBase miRNAs', 'Mouse miRBase miRNAs'])
+# plt.xlabel('RNAfold minimum free energy')
+
+
+
+statistics, ks = stats.kstest(all_mir_df['score'], filtered_five['score'], N=1000)
+print(ks)
+sns.kdeplot(data=all_mir_df, x='score')
 sns.kdeplot(data=filtered_five, x='score')
-sns.kdeplot(data=human, x='score')
-sns.kdeplot(data=ref_df, x='score')
-sns.kdeplot(data=mirbase_df, x='score')
-sns.kdeplot(data=mmu_df, x='score')
-plt.legend(['All results (mirGeneDB)', 'Human ncOrtho results (mirGeneDB)', 'Human mirGeneDB miRNAs', 'Human miRBase miRNAs', 'Mouse miRBase miRNAs'])
+ax = plt.gca()
+# plt.text(0, 0, str(round(ks)), bbox=dict(facecolor='red', alpha=0.5))
+# plt.text(-55, 0.09, f'KS-test: {round(ks, 2)}', ha='left', va='center')
+# ax.annota
 plt.xlabel('RNAfold minimum free energy')
+plt.title('19 vertebrate species')
+plt.legend(['mirGeneDB entries', 'ncOrtho results', f'KS-test: {round(ks, 2)}'])
 plt.show()
 
 # sns.kdeplot(data=filtered_five, x='score')
