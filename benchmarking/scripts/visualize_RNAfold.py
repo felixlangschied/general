@@ -26,60 +26,60 @@ all_mirbase = '/home/felixl/PycharmProjects/general/benchmarking/data/all19_mirg
 
 with open(json_path, 'r') as fh:
     sdict = json.load(fh)
-with open(avail_path, 'r') as fh:
-    available = fh.read().split('\n')
-    available.pop()
-with open(ref_path, 'r') as fh:
-    ref_dict = json.load(fh)
-with open(mouse_path, 'r') as fh:
-    mmu_dict = json.load(fh)
-with open(mirbase_path, 'r') as fh:
-    mirbase_dict = json.load(fh)
-with open(six_path, 'r') as fh:
-    six_dict = json.load(fh)
-with open(all_mirbase, 'r') as fh:
-    all_mir = json.load(fh)
+# with open(avail_path, 'r') as fh:
+#     available = fh.read().split('\n')
+#     available.pop()
+# with open(ref_path, 'r') as fh:
+#     ref_dict = json.load(fh)
+# with open(mouse_path, 'r') as fh:
+#     mmu_dict = json.load(fh)
+# with open(mirbase_path, 'r') as fh:
+#     mirbase_dict = json.load(fh)
+# with open(six_path, 'r') as fh:
+#     six_dict = json.load(fh)
+# with open(all_mirbase, 'r') as fh:
+#     all_mir = json.load(fh)
 
-# initialize dataframes
-df = pd.DataFrame.from_dict(sdict)
-ref_df = pd.DataFrame.from_dict(ref_dict)
-ref_df['score'] = pd.to_numeric(ref_df['score'])
-mmu_df = pd.DataFrame.from_dict(mmu_dict)
-mmu_df['score'] = pd.to_numeric(mmu_df['score'])
-mirbase_df = pd.DataFrame.from_dict(mirbase_dict)
-mirbase_df['score'] = pd.to_numeric(mirbase_df['score'])
-six_df = pd.DataFrame.from_dict(six_dict)
-six_df['score'] = pd.to_numeric(six_df['score'])
-all_mir_df = pd.DataFrame.from_dict(all_mir)
-all_mir_df['score'] = pd.to_numeric(all_mir_df['score'])
-print(df.columns)
-
-# analyze score column
-df['score'] = pd.to_numeric(df['score'])
-scores = df['score'].to_numpy()
-print(f'mean: {scores.mean()}')
-print(f'median: {np.median(scores)}')
-std = scores.std()
-mean = scores.mean()
-threesig = mean - 3 * std
-plustwosig = mean + 2 * std
-plusthreesig = mean + 3 * std
-print(f'standart deviation: {std}')
-print(f'2sig: {mean - 2 * std}')
-print(f'plus2sig: {plustwosig}')
-print(f'3sig: {mean - 3 * std}')
-print(f'plus2sig: {plusthreesig}')
-
-six_scores = six_df['score'].to_numpy()
-six_thres = six_scores.mean() - 3 * six_scores.std()
-
-# filter for human
-human = df[df['species'] == 'Homo_sapiens']
-# filter for 19 specs
-df = df[df['species'].isin(available)]
-# filter for score
-filtered_five = df[df['score'] >= threesig]
-filtered_six = six_df[six_df['score'] >= six_thres]
+# # initialize dataframes
+# df = pd.DataFrame.from_dict(sdict)
+# ref_df = pd.DataFrame.from_dict(ref_dict)
+# ref_df['score'] = pd.to_numeric(ref_df['score'])
+# mmu_df = pd.DataFrame.from_dict(mmu_dict)
+# mmu_df['score'] = pd.to_numeric(mmu_df['score'])
+# mirbase_df = pd.DataFrame.from_dict(mirbase_dict)
+# mirbase_df['score'] = pd.to_numeric(mirbase_df['score'])
+# six_df = pd.DataFrame.from_dict(six_dict)
+# six_df['score'] = pd.to_numeric(six_df['score'])
+# all_mir_df = pd.DataFrame.from_dict(all_mir)
+# all_mir_df['score'] = pd.to_numeric(all_mir_df['score'])
+# print(df.columns)
+#
+# # analyze score column
+# df['score'] = pd.to_numeric(df['score'])
+# scores = df['score'].to_numpy()
+# print(f'mean: {scores.mean()}')
+# print(f'median: {np.median(scores)}')
+# std = scores.std()
+# mean = scores.mean()
+# threesig = mean - 3 * std
+# plustwosig = mean + 2 * std
+# plusthreesig = mean + 3 * std
+# print(f'standart deviation: {std}')
+# print(f'2sig: {mean - 2 * std}')
+# print(f'plus2sig: {plustwosig}')
+# print(f'3sig: {mean - 3 * std}')
+# print(f'plus2sig: {plusthreesig}')
+#
+# six_scores = six_df['score'].to_numpy()
+# six_thres = six_scores.mean() - 3 * six_scores.std()
+#
+# # filter for human
+# human = df[df['species'] == 'Homo_sapiens']
+# # filter for 19 specs
+# df = df[df['species'].isin(available)]
+# # filter for score
+# filtered_five = df[df['score'] >= threesig]
+# filtered_six = six_df[six_df['score'] >= six_thres]
 
 # # plotting
 # sns.histplot(data=df, x='score')
@@ -113,18 +113,18 @@ filtered_six = six_df[six_df['score'] >= six_thres]
 
 
 
-statistics, ks = stats.kstest(all_mir_df['score'], filtered_five['score'], N=1000)
-print(ks)
-sns.kdeplot(data=all_mir_df, x='score')
-sns.kdeplot(data=filtered_five, x='score')
-ax = plt.gca()
-# plt.text(0, 0, str(round(ks)), bbox=dict(facecolor='red', alpha=0.5))
-# plt.text(-55, 0.09, f'KS-test: {round(ks, 2)}', ha='left', va='center')
-# ax.annota
-plt.xlabel('RNAfold minimum free energy')
-plt.title('19 vertebrate species')
-plt.legend(['mirGeneDB entries', 'ncOrtho results', f'KS-test: {round(ks, 2)}'])
-plt.show()
+# statistics, ks = stats.kstest(all_mir_df['score'], filtered_five['score'], N=1000)
+# print(ks)
+# sns.kdeplot(data=all_mir_df, x='score')
+# sns.kdeplot(data=filtered_five, x='score')
+# ax = plt.gca()
+# # plt.text(0, 0, str(round(ks)), bbox=dict(facecolor='red', alpha=0.5))
+# # plt.text(-55, 0.09, f'KS-test: {round(ks, 2)}', ha='left', va='center')
+# # ax.annota
+# plt.xlabel('RNAfold minimum free energy')
+# plt.title('19 vertebrate species')
+# plt.legend(['mirGeneDB entries', 'ncOrtho results', f'KS-test: {round(ks, 2)}'])
+# plt.show()
 
 # sns.kdeplot(data=filtered_five, x='score')
 # sns.kdeplot(data=filtered_six, x='score')
@@ -132,31 +132,31 @@ plt.show()
 # plt.show()
 
 
-small_score = df[df['score'] <= threesig]
-print(small_score)
-fams = set()
-for element in small_score['mirna_fam']:
-    fams.add(element)
-# for scheme in small_score['scheme']:
-#     print(scheme)
-# for seq in small_score['seq']:
-#     print(seq)
-print(fams)
+# small_score = df[df['score'] <= threesig]
+# print(small_score)
+# fams = set()
+# for element in small_score['mirna_fam']:
+#     fams.add(element)
+# # for scheme in small_score['scheme']:
+# #     print(scheme)
+# # for seq in small_score['seq']:
+# #     print(seq)
+# print(fams)
 
 
-repfams = df[df['mirna_fam'].isin(list(fams))].sort_values(by='score')
-# filter columns
-repfams = repfams.filter(items=['species', 'mirna_coorth', 'score'])
-# print(repfams)
-
-exfam = df[df['mirna'] == 'Hsa-Mir-154-P4b'].sort_values(by='score')
-exfam['length'] = exfam['seq'].apply(len)
-exfam = exfam.filter(items=['species', 'mirna_coorth', 'score', 'length', 'seq', 'scheme'])
-exfam['seq'] = exfam['seq'].apply(shorten)
-exfam['scheme'] = exfam['scheme'].apply(shorten)
-exfam.to_csv(f'{out_dir}/example_table.tsv', sep='\t', index=False)
-highlights = pd.concat([exfam.iloc[-3:-1, :], exfam.iloc[1:3, :]])
-highlights.to_csv(f'{out_dir}/highlights_table.tsv', sep='\t', index=False)
+# repfams = df[df['mirna_fam'].isin(list(fams))].sort_values(by='score')
+# # filter columns
+# repfams = repfams.filter(items=['species', 'mirna_coorth', 'score'])
+# # print(repfams)
+#
+# exfam = df[df['mirna'] == 'Hsa-Mir-154-P4b'].sort_values(by='score')
+# exfam['length'] = exfam['seq'].apply(len)
+# exfam = exfam.filter(items=['species', 'mirna_coorth', 'score', 'length', 'seq', 'scheme'])
+# exfam['seq'] = exfam['seq'].apply(shorten)
+# exfam['scheme'] = exfam['scheme'].apply(shorten)
+# exfam.to_csv(f'{out_dir}/example_table.tsv', sep='\t', index=False)
+# highlights = pd.concat([exfam.iloc[-3:-1, :], exfam.iloc[1:3, :]])
+# highlights.to_csv(f'{out_dir}/highlights_table.tsv', sep='\t', index=False)
 
 # print(exfam.filter(items=['species', 'mirna_coorth', 'score', 'length']))
 # for scheme in exfam['scheme']:
@@ -167,9 +167,8 @@ highlights.to_csv(f'{out_dir}/highlights_table.tsv', sep='\t', index=False)
 # highlights = pd.concat([exfam.iloc[1:3, :], exfam.iloc[-3:-1, :]])
 # highlights['seq'] = highlights['seq'].apply(shorten)
 
-
-
-
-# below MIRNAminer threshold
-# below = df[df['score'] >= -25]
-# print(below)
+df = pd.DataFrame.from_dict(sdict)
+pot_fp = df[df['mirna'] == 'Hsa-Mir-7-P1']
+print(pot_fp)
+pot_fp = pot_fp[pot_fp['species'] == 'Danio_rerio']
+print(pot_fp)
