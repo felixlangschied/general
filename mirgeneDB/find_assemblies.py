@@ -32,64 +32,76 @@ for key, value in remove_dict.items():
 specsfound = []
 seed_dict = {}
 mammals = '/share/gluster/GeneSets/NCBI-Genomes/MammalianVertebratesRefSeq/raw_dir/active/{}/genomic.fna'
-with open(mampath, 'r') as fh:
-    for line in fh:
-        data = line.strip().split('|')
-        if data[-1] == 'active':
-            # specname = ' '.join(data[1].split(' ')[:2])
-            # print(specname)
-            specname = data[1]
-            if specname in spec_list:
-                specsfound.append(specname)
-                access = data[2]
-                specname = specname.replace(' ', '_')
-                seed_dict[specname] = mammals.format(access)
-nonmams = '/share/gluster/GeneSets/NCBI-Genomes/nonMammalianVertebratesRefSeq/raw_dir/active_June21/{}/genomic.fna'
-with open(nonpath, 'r') as fh:
-    for line in fh:
-        data = line.strip().split('|')
-        if data[-1] == 'active':
-            # specname = ' '.join(data[1].split(' ')[:2])
-            specname = data[1]
-            # print(specname)
-            if specname in spec_list:
-                specsfound.append(specname)
-                access = data[2]
-                specname = specname.replace(' ', '_')
-                seed_dict[specname] = nonmams.format(access)
-inverts = '/share/gluster/GeneSets/NCBI-Genomes/InvertebratesRefSeq/raw_dir/active/{}/genomic.fna'
-with open(inpath, 'r') as fh:
-    for line in fh:
-        data = line.strip().split('|')
-        if data[-1] == 'active':
-            # specname = ' '.join(data[1].split(' ')[:2])
-            specname = data[1]
-            # print(specname)
-            if specname in spec_list:
-                specsfound.append(specname)
-                access = data[2]
-                specname = specname.replace(' ', '_')
-                seed_dict[specname] = inverts.format(access)
+mapfile = f'{out_dir}/mirgenedb_specs.txt'
+with open(mapfile, 'w') as of:
+    with open(mampath, 'r') as fh:
+        for line in fh:
+            data = line.strip().split('|')
+            if data[-1] == 'active':
+                # specname = ' '.join(data[1].split(' ')[:2])
+                # print(specname)
+                specname = data[1]
+                if specname in spec_list:
+                    specsfound.append(specname)
+                    access = data[2]
+                    specname = specname.replace(' ', '_')
+                    seed_dict[specname] = mammals.format(access)
+                    taxid = data[0]
+                    of.write(f'{taxid}\t{specname}\n')
+    nonmams = '/share/gluster/GeneSets/NCBI-Genomes/nonMammalianVertebratesRefSeq/raw_dir/active_June21/{}/genomic.fna'
+    with open(nonpath, 'r') as fh:
+        for line in fh:
+            data = line.strip().split('|')
+            if data[-1] == 'active':
+                # specname = ' '.join(data[1].split(' ')[:2])
+                specname = data[1]
+                # print(specname)
+                if specname in spec_list:
+                    specsfound.append(specname)
+                    access = data[2]
+                    specname = specname.replace(' ', '_')
+                    seed_dict[specname] = nonmams.format(access)
+                    taxid = data[0]
+                    of.write(f'{taxid}\t{specname}\n')
+    inverts = '/share/gluster/GeneSets/NCBI-Genomes/InvertebratesRefSeq/raw_dir/active/{}/genomic.fna'
+    with open(inpath, 'r') as fh:
+        for line in fh:
+            data = line.strip().split('|')
+            if data[-1] == 'active':
+                # specname = ' '.join(data[1].split(' ')[:2])
+                specname = data[1]
+                # print(specname)
+                if specname in spec_list:
+                    specsfound.append(specname)
+                    access = data[2]
+                    specname = specname.replace(' ', '_')
+                    seed_dict[specname] = inverts.format(access)
+                    taxid = data[0]
+                    of.write(f'{taxid}\t{specname}\n')
 
 print(len(specsfound))
 print(len(spec_list))
 print(set(spec_list) - set(specsfound))
 # print(spec_list)
 
-mirbh_call = (
-    'python /home/felixl/PycharmProjects/mirbh/mirbh/mirna_rbh.py '
-    '-n /share/project2/felix/ncOrtho/mirgenedb/data/mirgenedb.tsv '
-    '-o /home/felixl/project/ncOrtho/benchmark/mirbh '
-    '-q /home/felixl/project/ncOrtho/benchmark/ncortho/{0}/data/{0}.fa '
-    '-r /home/felixl/project/ncOrtho/benchmark/ncortho/Homo_sapiens/data/Homo_sapiens.fa '
-    '--queryname {0} '
-    '--cpu 4'
-    '\n'
-)
-with open(f'/home/felixl/project/ncOrtho/benchmark/mirbh/seed.txt', 'w') as sh:
-    for qname in seed_dict:
-        outstr = mirbh_call.format(qname)
-        sh.write(outstr)
+
+
+
+
+# mirbh_call = (
+#     'python /home/felixl/PycharmProjects/mirbh/mirbh/mirna_rbh.py '
+#     '-n /share/project2/felix/ncOrtho/mirgenedb/data/mirgenedb.tsv '
+#     '-o /home/felixl/project/ncOrtho/benchmark/mirbh '
+#     '-q /home/felixl/project/ncOrtho/benchmark/ncortho/{0}/data/{0}.fa '
+#     '-r /home/felixl/project/ncOrtho/benchmark/ncortho/Homo_sapiens/data/Homo_sapiens.fa '
+#     '--queryname {0} '
+#     '--cpu 4'
+#     '\n'
+# )
+# with open(f'/home/felixl/project/ncOrtho/benchmark/mirbh/seed.txt', 'w') as sh:
+#     for qname in seed_dict:
+#         outstr = mirbh_call.format(qname)
+#         sh.write(outstr)
 
 
 # ncortho_call = (
