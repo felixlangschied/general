@@ -6,7 +6,8 @@ import json
 all_file = '/home/felixl/PycharmProjects/general/benchmarking/data/mirgenedb/ALL-pre.fas'
 spec_trash = '/home/felixl/PycharmProjects/general/benchmarking/data/mirgenedb_specs_abb.txt'
 pres_path = '/home/felixl/PycharmProjects/general/benchmarking/data/present.txt'
-out_file = '/home/felixl/PycharmProjects/general/benchmarking/data/all19_mirgenedb_rnafold'
+# out_file = '/home/felixl/PycharmProjects/general/benchmarking/data/all19_mirgenedb_rnafold'
+out_file = '/home/felixl/PycharmProjects/general/benchmarking/RNAfold/data/mirgenedb_rnafold.json'
 
 
 with open(pres_path, 'r') as fh:
@@ -31,13 +32,13 @@ with open(all_file, 'r') as fh:
         if line.startswith('>'):
             abb = line.split('-')[0].replace('>', '')
             specname = spec_map[abb]
-            if specname not in present:
-                continue
+            # if specname not in present:
+            #     continue
             mirna = '-'.join(line.strip().split('-')[1:])
             mirfam = '-'.join(line.strip().split('-')[1:3]).replace('_pre', '')
         else:
-            if specname not in present:
-                continue
+            # if specname not in present:
+            #     continue
             seq = line.strip()
             # do RNAfold
             with tempfile.NamedTemporaryFile(mode='w+') as fp:
@@ -55,7 +56,7 @@ with open(all_file, 'r') as fh:
                 df_dict['mirna'].append(mirna)
                 df_dict['mirna_fam'].append(mirfam)
                 df_dict['score'].append(score)
-                df_dict['seq'] = seq
+                df_dict['seq'].append(seq)
                 df_dict['scheme'].append(scheme)
 
                 if os.path.isfile(f'{mirna}_ss.ps'):

@@ -1,27 +1,21 @@
-import subprocess as sp
-import glob
-import os
 import tempfile
 import json
+import glob
+import os
+import subprocess as sp
 
-# data_dir = r'C:\Users\felix\PycharmProjects\general\benchmarking\RNAfold\mirbh_data'
-# data_dir = '/home/felixl/project/ncOrtho/benchmark/filtered_mirbh'
-# outf = '/home/felixl/PycharmProjects/general/benchmarking/RNAfold/data/filtered_mirbh_folds.json'
+data_dir = '/home/felixl/project/ncOrtho/benchmark/ncortho'
+outf = '/home/felixl/PycharmProjects/general/benchmarking/RNAfold/data/ncortho.json'
 
-data_dir = '/home/felixl/project/ncOrtho/benchmark/mirbh'
-outf = '/home/felixl/PycharmProjects/general/benchmarking/RNAfold/data/mirbh_folds.json'
+files = glob.glob(f'{data_dir}/*/*orthologs.fa')
 
-files = glob.glob(f'{data_dir}/*.fa')
-
-df_dict = {'species': [], 'mirna': [], 'mirna_fam': [], 'score': [], 'seq': [], 'scheme': []}
-
+df_dict = {'species': [], 'mirna_coorth': [], 'mirna': [], 'mirna_fam': [], 'score': [], 'seq': [], 'scheme': []}
 for file in files:
-    species = file.split(os.sep)[-1].replace('.fa', '')
-    # print(species)
     with open(file, 'r') as fh:
         for line in fh:
             if line.startswith('>'):
-                mirid = line.strip().split('|')[0]
+                species, coorth = line.strip().split('|')[:2]
+                mirid = coorth.split('_c')[0]
                 mirna = '-'.join(mirid.strip().split('-')[1:])
                 mirfam = '-'.join(mirid.strip().split('-')[1:3]).replace('_pre', '')
             else:
@@ -39,6 +33,7 @@ for file in files:
                     scheme, score = schemscore.split(' (')
                     score = score.replace(')', '')
                     df_dict['species'].append(species)
+                    df_dict['mirna_coorth'].append(coorth)
                     df_dict['mirna'].append(mirna)
                     df_dict['mirna_fam'].append(mirfam)
                     df_dict['score'].append(score)
