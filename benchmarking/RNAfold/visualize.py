@@ -9,6 +9,7 @@ import seaborn as sns
 # mirgene_path = r'C:\Users\felix\PycharmProjects\general\benchmarking\RNAfold\data\mirgenedb_rnafold.json'
 nc_path = '/home/felixl/PycharmProjects/general/benchmarking/RNAfold/data/ncortho.json'
 mirbh_path = '/home/felixl/PycharmProjects/general/benchmarking/RNAfold/data/mirbh_folds.json'
+filtered_path = '/home/felixl/PycharmProjects/general/benchmarking/RNAfold/data/filtered_mirbh_folds.json'
 mirgene_path = '/home/felixl/PycharmProjects/general/benchmarking/RNAfold/data/mirgenedb_rnafold.json'
 filtered = False
 style = 'whitegrid'
@@ -32,7 +33,7 @@ def make_distplot(df, sty, fil):
     sns.set_style(sty)
     plt.subplot(211)
     # sns.histplot(data=fam_set, x='length', hue='type', element='poly', fill=False)
-    sns.kdeplot(data=df, x='length', hue='type')
+    sns.kdeplot(data=df, x='length', hue='type', hue_order=['miRGeneDB', 'ncOrtho', 'mirbh_length_cutoff', 'mirbh'])
     plt.tight_layout()
     plt.xlabel('Length [nt]')
 
@@ -40,14 +41,14 @@ def make_distplot(df, sty, fil):
         plt.title('Outliers filtered')
         plt.xlim([40, 80])
     else:
-        plt.xlim([0, 140])
+        plt.xlim([20, 100])
         # plt.xlim([140, 1000])
-        plt.ylim([-0.001, 0.045])
+        # plt.ylim([-0.001, 0.06])
 
     # plot score distribution
     plt.subplot(212)
     # sns.histplot(data=fam_set, x='score', hue='type', element='poly', fill=False)
-    sns.kdeplot(data=df, x='score', hue='type')
+    sns.kdeplot(data=df, x='score', hue='type', hue_order=['miRGeneDB', 'ncOrtho', 'mirbh_length_cutoff', 'mirbh'])
 
     plt.xlabel('RNAfold minimum free energy')
 
@@ -56,7 +57,7 @@ def make_distplot(df, sty, fil):
         plt.xlim([-40, -10])
     else:
         plt.xlim([-60, 0])
-        plt.ylim([-0.001, 0.045])
+        # plt.ylim([-0.001, 0.05])
     plt.tight_layout()
     plt.show()
 
@@ -70,13 +71,16 @@ def fam_count(df, spec):
 ncortho = load_df(nc_path, 'ncOrtho')
 ncortho.pop('mirna_coorth')
 mirbh = load_df(mirbh_path, 'mirbh')
+filtered = load_df(filtered_path, 'mirbh_length_cutoff')
+print(mirbh['mirna'].head())
+print(ncortho['mirna'].head())
 mirgene = load_df(mirgene_path, 'miRGeneDB')
 mirgene_famset = mirgene[mirgene['mirna_fam'].isin(mirbh['mirna_fam'].unique())]
 # show largest miRNAs in database
-print(mirgene_famset.sort_values(by='length', ascending=False).head(10))
+# print(mirgene_famset.sort_values(by='length', ascending=False).head(10))
 
 # concatenate dataframes
-ges = pd.concat([mirgene, ncortho, mirbh])
+ges = pd.concat([mirgene, ncortho, mirbh, filtered])
 # filter for families for which orthologs  have been detected by mirbh
 fam_set = ges[ges['mirna_fam'].isin(mirbh['mirna_fam'].unique())]
 
@@ -117,7 +121,7 @@ ges = pd.concat([mirgene, ncortho, mirbh])
 fil_fam_set = ges[ges['mirna_fam'].isin(mirbh['mirna_fam'].unique())]
 
 # plot length distribution of orthologs
-make_distplot(fil_fam_set, style, fil=True)
+# make_distplot(fil_fam_set, style, fil=True)
 
 # plot ortholog families per species
 # count families
@@ -138,7 +142,7 @@ for species in mirbh['species'].unique():
 
     c_vis['species'].append(species)
     c_vis['count'].append(fam_count(mirbh, species))
-    c_vis['source'].append('mirbh')
+    c_vis['source'].append('mirbh_length_cutoff')
 
     c_vis['species'].append(species)
     c_vis['count'].append(fam_count(ncortho, species))
@@ -155,7 +159,7 @@ plt.figure()
 sns.set_style(style)
 ever_second = [True, True, True, False, False, False] * int((len(vis_df) / 3) / 2)
 small_count = vis_df.copy()[ever_second].sort_values(by=['count'], ascending=False)
-sns.barplot(data=small_count, y='species', x='count', hue='source', orient='h')
+sns.barplot(data=small_count, y='species', x='count', hue='source', orient='h', hue_order=['mirgenedb', 'ncortho', 'mirbh_length_cutoff'])
 # plt.xticks(rotation=30, ha='right')
 plt.tight_layout()
 

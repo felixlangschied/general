@@ -1,7 +1,10 @@
 import glob
 from collections import Counter
+import os
 
-blast_dir = r'C:\Users\felix\PycharmProjects\general\benchmarking\positive_set\data\TP_blast'
+# blast_dir = r'C:\Users\felix\PycharmProjects\general\benchmarking\positive_set\data\TP_blast'
+# blast_dir = '/home/felixl/project/ncOrtho/benchmark/ncortho/analysis/TP_blast'
+blast_dir = '/home/felixl/project/ncOrtho/benchmark/filtered_mirbh/analysis/TP_blast'
 
 blast_files = glob.glob(f'{blast_dir}/*')
 
@@ -9,7 +12,7 @@ best_hit = set()
 accepted = {}
 rejected = {}
 for file in blast_files:
-    species = file.split('\\')[-1].replace('_blastout.txt', '')
+    species = file.split(os.sep)[-1].replace('_blastout.txt', '')
     accepted[species] = []
     rejected[species] = []
     with open(file, 'r') as fh:
@@ -27,7 +30,7 @@ for file in blast_files:
                 # check that hit is from same family
                 if db_fam == res_fam:
                     # check for identity and coverage
-                    if identity >= 90 and coverage >= 80:
+                    if identity >= 95 and coverage >= 90:
                         accepted[species].append(db_fam)
                     else:
                         rejected[species].append(db_fam)
@@ -39,9 +42,13 @@ for file in blast_files:
     rejected[species] = dict(Counter(rejected[species]))
 
 
+# print(accepted)
+counter = 0
+for species in accepted:
+    counter += len(accepted[species].values())
+    # print(len(accepted[species].values()))
+print(counter)
 
-
-print(accepted)
 # print(rejected)
 # for species in rejected:
 #     if rejected[species]:

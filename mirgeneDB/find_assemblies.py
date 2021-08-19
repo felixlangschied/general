@@ -5,8 +5,10 @@ mampath = '/share/gluster/GeneSets/NCBI-Genomes/MammalianVertebratesRefSeq/raw_d
 nonpath = '/share/gluster/GeneSets/NCBI-Genomes/nonMammalianVertebratesRefSeq/raw_dir/non-mammalianVertebrates-RefSeq_taxid2GCF.txt'
 inpath = '/share/gluster/GeneSets/NCBI-Genomes/InvertebratesRefSeq/raw_dir/InvertebratesRefSeq_taxid2GCF.txt'
 spec_path = '/home/felixl/PycharmProjects/general/benchmarking/data/mirgenedb_specs_abb.txt'
-
 out_dir = '/home/felixl/project/ncOrtho/benchmark'
+
+all_path = '/home/felixl/PycharmProjects/general/benchmarking/data/mirgenedb/ALL-pre.fas'
+spec_out = '/home/felixl/PycharmProjects/general/benchmarking/data/mirgenedb/spec_specific/{}.fa'
 
 spec_map = {}
 spec_list = []
@@ -84,7 +86,26 @@ print(len(spec_list))
 print(set(spec_list) - set(specsfound))
 # print(spec_list)
 
-
+print(spec_map)
+# make species specific fasta files of mirgenedb entries
+with open(all_path, 'r') as fh:
+    data = fh.read().split('>')
+    if not data[0]:
+        data.pop(0)
+    for entry in data:
+        db_abb = entry[0:3].lower()
+        # print(db_abb)
+        try:
+            name = spec_map[db_abb]
+            out_file = spec_out.format(name.replace(' ', '_'))
+            if name not in specsfound:
+                continue
+            parsed_entry = '>' + entry.replace(db_abb, name)
+            print(parsed_entry.strip())
+            with open(out_file, 'a') as of:
+                of.write(parsed_entry)
+        except KeyError as e:
+            print(e)
 
 
 

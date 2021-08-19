@@ -5,23 +5,24 @@ import tempfile
 import json
 
 # data_dir = r'C:\Users\felix\PycharmProjects\general\benchmarking\RNAfold\mirbh_data'
-# data_dir = '/home/felixl/project/ncOrtho/benchmark/filtered_mirbh'
-# outf = '/home/felixl/PycharmProjects/general/benchmarking/RNAfold/data/filtered_mirbh_folds.json'
+data_dir = '/home/felixl/project/ncOrtho/benchmark/filtered_mirbh'
+outf = '/home/felixl/PycharmProjects/general/benchmarking/RNAfold/data/filtered_mirbh_folds.json'
 
-data_dir = '/home/felixl/project/ncOrtho/benchmark/mirbh'
-outf = '/home/felixl/PycharmProjects/general/benchmarking/RNAfold/data/mirbh_folds.json'
+# data_dir = '/home/felixl/project/ncOrtho/benchmark/mirbh'
+# outf = '/home/felixl/PycharmProjects/general/benchmarking/RNAfold/data/mirbh_folds.json'
 
-files = glob.glob(f'{data_dir}/*.fa')
+files = glob.glob(f'{data_dir}/*_orthologs.fa')
+# print(files)
 
 df_dict = {'species': [], 'mirna': [], 'mirna_fam': [], 'score': [], 'seq': [], 'scheme': []}
 
 for file in files:
-    species = file.split(os.sep)[-1].replace('.fa', '')
-    # print(species)
+    species = file.split(os.sep)[-1].replace('_orthologs.fa', '')
+    print(species)
     with open(file, 'r') as fh:
         for line in fh:
             if line.startswith('>'):
-                mirid = line.strip().split('|')[0]
+                mirid = line.strip().split('|')[1]
                 mirna = '-'.join(mirid.strip().split('-')[1:])
                 mirfam = '-'.join(mirid.strip().split('-')[1:3]).replace('_pre', '')
             else:
