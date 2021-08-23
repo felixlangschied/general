@@ -14,6 +14,10 @@ mirgene_path = '/home/felixl/PycharmProjects/general/benchmarking/RNAfold/data/m
 filtered = False
 style = 'whitegrid'
 
+with open('/home/felixl/project/ncOrtho/benchmark/vertebrate_list.txt', 'r') as vh:
+    vertebrates = [spec.strip().replace(' ', '_') for spec in vh]
+print(vertebrates)
+
 
 def load_df(path, name):
     with open(path, 'r') as fh:
@@ -26,13 +30,15 @@ def load_df(path, name):
         df['species'] = df['species'].str.replace('Sarcophilus_harrissii', 'Sarcophilus_harrisii')
         df['species'] = df['species'].str.replace('Canis_familiaris', 'Canis_lupus_familiaris')
         df['species'] = df['species'].str.replace('Strongylocentrotus_purpuratus_', 'Strongylocentrotus_purpuratus')
+        # filter for vertebrates only
+        # df = df[df['species'].isin(vertebrates)]
         return df
 
 
 def make_distplot(df, sty, fil):
     sns.set_style(sty)
     plt.subplot(211)
-    # sns.histplot(data=fam_set, x='length', hue='type', element='poly', fill=False)
+    # sns.histplot(data=fam_set, x='length', hue='type', discrete=True, multiple='stack')#, element='step', fill=False)
     sns.kdeplot(data=df, x='length', hue='type', hue_order=['miRGeneDB', 'ncOrtho', 'mirbh_length_cutoff', 'mirbh'])
     plt.tight_layout()
     plt.xlabel('Length [nt]')
@@ -47,7 +53,7 @@ def make_distplot(df, sty, fil):
 
     # plot score distribution
     plt.subplot(212)
-    # sns.histplot(data=fam_set, x='score', hue='type', element='poly', fill=False)
+    # sns.histplot(data=fam_set, x='score', hue='type')#, element='poly', fill=False)
     sns.kdeplot(data=df, x='score', hue='type', hue_order=['miRGeneDB', 'ncOrtho', 'mirbh_length_cutoff', 'mirbh'])
 
     plt.xlabel('RNAfold minimum free energy')
@@ -81,14 +87,15 @@ mirgene_famset = mirgene[mirgene['mirna_fam'].isin(mirbh['mirna_fam'].unique())]
 
 # concatenate dataframes
 ges = pd.concat([mirgene, ncortho, mirbh, filtered])
+# ges = pd.concat([mirgene, ncortho])
 # filter for families for which orthologs  have been detected by mirbh
 fam_set = ges[ges['mirna_fam'].isin(mirbh['mirna_fam'].unique())]
 
 # plot distribution plot
-make_distplot(fam_set, style, fil=False)
+make_distplot(ges, style, fil=False)
 
 # calculate length cutoff
-length = mirgene_famset['length'].to_numpy()
+length = mirgene['length'].to_numpy()
 m_threesig = length.mean() - 3 * length.std()
 p_threesig = length.mean() + 3 * length.std()
 print(f'3sig: {m_threesig} - {p_threesig}')
@@ -97,7 +104,9 @@ print(f'3sig: {m_threesig} - {p_threesig}')
 # determine number of sequences above 3sig level for each dataset
 large_mirgene = mirgene['length'][mirgene['length'] > p_threesig].size
 large_mirbh = mirbh['length'][mirbh['length'] > p_threesig].size
-large_ncortho = ncortho['length'][ncortho['length'] > p_threesig].size
+# large_ncortho = ncortho['length'][ncortho['length'] > p_threesig].size
+large_ncortho = ncortho[ncortho['length'] > 80]
+# large_ncortho = ncortho.sort_values(by='length', ascending=False).head(30)
 print(large_mirgene)
 print(large_ncortho)
 print(large_mirbh)
@@ -152,8 +161,13 @@ vis_df = pd.DataFrame.from_dict(c_vis)
 plt.figure()
 sns.set_style(style)
 count_sorted = vis_df.copy().sort_values(by=['count'], ascending=False)
-sns.barplot(data=count_sorted, y='species', x='count', hue='source', orient='h')
+sns.barplot(data=count_sorted, y='species', x='count', hue='source', orient='h', hue_order=['mirgenedb', 'ncortho', 'mirbh_length_cutoff'])
 plt.tight_layout()
+
+# print(count_sorted.head())
+# nc_speccount = count_sorted[count_sorted["source"] == "ncortho"]["count"]
+# print(nc_speccount)
+# print(f'ncortho: {count_sorted[count_sorted["source"] == "ncortho"]["count"]}')
 
 plt.figure()
 sns.set_style(style)
@@ -162,5 +176,13 @@ small_count = vis_df.copy()[ever_second].sort_values(by=['count'], ascending=Fal
 sns.barplot(data=small_count, y='species', x='count', hue='source', orient='h', hue_order=['mirgenedb', 'ncortho', 'mirbh_length_cutoff'])
 # plt.xticks(rotation=30, ha='right')
 plt.tight_layout()
+
+# plt.figure()
+# sns.set_style(style)
+# ever_second = [True, True, False, False] * int((len(vis_df) / 2) / 2)
+# small_count = vis_df.copy()[ever_second].sort_values(by=['count'], ascending=False)
+# sns.barplot(data=small_count, y='species', x='count', hue='source', orient='h', hue_order=['mirgenedb', 'ncortho'])
+# # plt.xticks(rotation=30, ha='right')
+# plt.tight_layout()
 
 plt.show()

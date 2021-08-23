@@ -14,7 +14,8 @@ outf = '/home/felixl/project/ncOrtho/benchmark/filtered_mirbh/analysis/blast_res
 
 def run_blast(mirf):
     mkblast_raw = 'makeblastdb -in {0} -out {1} -dbtype nucl'
-    blast_raw = 'blastn -task megablast -query {0} -db {1} -outfmt "6 std qcovhsp" -perc_identity 90 -qcov_hsp_perc 80'
+    # blast_raw = 'blastn -task megablast -query {0} -db {1} -outfmt "6 std qcovhsp" -perc_identity 90 -qcov_hsp_perc 80'
+    blast_raw = 'blastn -task megablast -query {0} -dust "no" -db {1} -outfmt "6 std qcovhsp"'
 
     blast_db_path = mirf.replace('.fa', '')
     species = blast_db_path.split(os.sep)[-1]
@@ -48,6 +49,7 @@ def run_blast(mirf):
 
 def check_best_hit(results, ic, cc):
     ortho_check = set()
+    reject_count = 0
     return_dict = {'species': [], 'miRNA': [], 'identity': [], 'coverage': [], 'confirmed': []}
     for line in results:
         if line:  # skip emtpy lines
@@ -76,6 +78,7 @@ def check_best_hit(results, ic, cc):
                         print(f'Result Chromosome: {data[0].split("|")[2]}')
                         print(f'Query miRNA: {data[1]}')
                         print('\n')
+                        reject_count += 1
 
                         return_dict['species'].append(species)
                         return_dict['miRNA'].append(res_mirid)
@@ -90,7 +93,8 @@ def check_best_hit(results, ic, cc):
                     return_dict['coverage'].append(coverage)
                     return_dict['identity'].append(ident)
                     return_dict['confirmed'].append(False)
-    return return_dict
+                    reject_count += 1
+    return return_dict, reject_count
 
             # print(line)
 
@@ -99,15 +103,18 @@ mirgene_files = glob.glob(f'{spec_dir}/*.fa')
 # df = pd.DataFrame()
 df_dict = {'species': [], 'miRNA': [], 'identity': [], 'coverage': [], 'confirmed': []}
 total_res = 0
+total_rejected = 0
 for mirg_f in mirgene_files:
     species = mirg_f.split(os.sep)[-1].replace('.fa', '')
     print(species)
     blast_res, count = run_blast(mirg_f)
     total_res += count
-    blast_dict = check_best_hit(blast_res, 95, 80)
+    blast_dict, rej_count = check_best_hit(blast_res, 90, 80)
+    total_rejected += rej_count
     for key in df_dict:
         df_dict[key].extend(blast_dict[key])
 print(total_res)
+print(total_rejected)
 
 with open(outf, 'w') as of:
     json.dump(df_dict, of)

@@ -33,6 +33,7 @@ for key, value in remove_dict.items():
 
 specsfound = []
 seed_dict = {}
+vertebrates = []
 mammals = '/share/gluster/GeneSets/NCBI-Genomes/MammalianVertebratesRefSeq/raw_dir/active/{}/genomic.fna'
 mapfile = f'{out_dir}/mirgenedb_specs.txt'
 with open(mapfile, 'w') as of:
@@ -45,6 +46,7 @@ with open(mapfile, 'w') as of:
                 specname = data[1]
                 if specname in spec_list:
                     specsfound.append(specname)
+                    vertebrates.append(specname)
                     access = data[2]
                     specname = specname.replace(' ', '_')
                     seed_dict[specname] = mammals.format(access)
@@ -60,6 +62,7 @@ with open(mapfile, 'w') as of:
                 # print(specname)
                 if specname in spec_list:
                     specsfound.append(specname)
+                    vertebrates.append(specname)
                     access = data[2]
                     specname = specname.replace(' ', '_')
                     seed_dict[specname] = nonmams.format(access)
@@ -80,6 +83,11 @@ with open(mapfile, 'w') as of:
                     seed_dict[specname] = inverts.format(access)
                     taxid = data[0]
                     of.write(f'{taxid}\t{specname}\n')
+
+with open(f'{out_dir}/vertebrate_list.txt', 'w') as vh:
+    for spec in vertebrates:
+        vh.write(spec)
+        vh.write('\n')
 
 print(len(specsfound))
 print(len(spec_list))
