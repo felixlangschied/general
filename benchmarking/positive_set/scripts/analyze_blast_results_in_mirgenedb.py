@@ -17,7 +17,8 @@ FP = pd.read_csv(pot_FP, sep='\t')
 a = np.char.array(FP['species'].values)
 b = np.char.array(FP['mirfam'].values)
 FP['specfam'] = (a + b'|' + b).astype(str)
-print(FP)
+
+# print(FP)
 
 # load BLAST results
 df = pd.DataFrame.from_dict(df_dict)
@@ -38,8 +39,9 @@ bl_fp = df[df['specfam'] == 'Sarcophilus_harrisii|Mir-1287']
 
 
 # apply threshold
-below_t = df[(df['identity'] < 90) | (df['coverage'] < 80)]
+below_t = df[(df['identity'] < 95) | (df['coverage'] < 95)]
 print(below_t['mirfam'].unique())
+print(len(below_t['mirfam'].unique()))
 
 # below_t.to_csv(outf, sep='\t', index=False)
 
