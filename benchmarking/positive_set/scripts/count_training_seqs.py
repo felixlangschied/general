@@ -31,7 +31,7 @@ with open(miss_path, 'r') as fh:
 #                 df_dict['fam'].append(fam)
 #                 df_dict['count'].append(int(data[2]) - 1)
 # count_df = pd.DataFrame.from_dict(df_dict)
-# count_df.to_csv('/home/felixl/PycharmProjects/general/benchmarking/positive_set/data/training_count.csv')
+# count_df.to_csv('/home/felixl/PycharmProjects/general/benchmarking/scripts/data/training_count.csv')
 count_df = pd.read_csv('/home/felixl/PycharmProjects/general/benchmarking/positive_set/data/training_count.csv')
 print(count_df.head())
 missed_df = count_df[count_df['fam'].isin(missed)]

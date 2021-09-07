@@ -4,10 +4,9 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
 
-# inpath = r'C:\Users\felix\PycharmProjects\general\benchmarking\scripts\data\blast_results_in_mirgenedb.json'
-inpath = '/home/felixl/project/ncOrtho/benchmark/filtered_mirbh/analysis/blast_results_in_mirgenedb.json'
-outf = '/home/felixl/PycharmProjects/general/benchmarking/scripts/data/ncortho_res_below_90i_80c.txt'
-pot_FP = '/home/felixl/PycharmProjects/general/benchmarking/scripts/data/fams_found_but_not_in_mirgenedb.txt'
+inpath = '/home/felixl/PycharmProjects/general/def_benchmark/scripts/blast_results_in_mirgenedb.json'
+# outf = '/home/felixl/PycharmProjects/general/benchmarking/scripts/data/ncortho_res_below_90i_80c.txt'
+pot_FP = '/home/felixl/PycharmProjects/general/def_benchmark/data/fams_found_but_not_in_mirgenedb.txt'
 
 with open(inpath, 'r') as fh:
     df_dict = json.load(fh)
@@ -50,13 +49,13 @@ print(len(below_t['mirfam'].unique()))
 
 
 
-# # plot
-# a = np.char.array(df['identity'].values)
-# b = np.char.array(df['coverage'].values)
-# df['idcov'] = (a + b'_' + b).astype(str)
-# df['count'] = df.groupby('idcov')['idcov'].transform('count')
-# sns.set_style('darkgrid')
-# sns.scatterplot(data=df, x='identity', y='coverage', size='count', sizes=(30, 300))
-# plt.tight_layout()
-# plt.show()
+# plot
+a = np.char.array(df['identity'].values)
+b = np.char.array(df['coverage'].values)
+df['idcov'] = (a + b'_' + b).astype(str)
+df['count'] = df.groupby('idcov')['idcov'].transform('count')
+sns.set_style('darkgrid')
+sns.scatterplot(data=df, x='identity', y='coverage', size='count', sizes=(30, 300))
+plt.tight_layout()
+plt.show()
 

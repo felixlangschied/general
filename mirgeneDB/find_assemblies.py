@@ -133,22 +133,25 @@ with open(all_path, 'r') as fh:
 #         sh.write(outstr)
 
 
-# ncortho_call = (
-#     'ncSearch '
-#     '-m /home/felixl/project/ncOrtho/benchmark/CMs '
-#     '-n /home/felixl/project/ncOrtho/benchmark/mirgenedb.tsv '
-#     '-o /home/felixl/project/ncOrtho/benchmark/ncortho '
-#     '-q {} '
-#     '-r  /share/gluster/GeneSets/NCBI-Genomes/MammalianVertebratesRefSeq/raw_dir/active/GCF_000001405.39/genomic.fna '
-#     '--refblast /home/felixl/project/ncOrtho/benchmark/refblast/Homo_sapiens.fa '
-#     '--queryname {} '
-#     '--cpu 4 '
-#     '\n'
-#     )
-# with open(f'/home/felixl/project/ncOrtho/benchmark/ncortho/seed.txt', 'w') as sh:
-#     for qname in seed_dict:
-#         outstr = ncortho_call.format(seed_dict[qname], qname)
-#         sh.write(outstr)
+ncortho_call = (
+    # 'ncSearch '
+    'python /home/felixl/PycharmProjects/ncOrtho/ncOrtho/ncortho.py '
+    '-m /home/felixl/project/ncOrtho/benchmark/CMs '
+    '-n /home/felixl/project/ncOrtho/data/mat_mirgenedb.tsv '
+    '-o /home/felixl/project/ncOrtho/benchmark/matmode_ncortho '
+    '-q {0} '
+    '-r /share/gluster/GeneSets/NCBI-Genomes/MammalianVertebratesRefSeq/raw_dir/active/GCF_000001405.39/genomic.fna '
+    '--refblast /home/felixl/project/ncOrtho/benchmark/ncortho/Homo_sapiens/data/Homo_sapiens.fa '
+    '--queryname {1} '
+    '--queryblast /home/felixl/project/ncOrtho/benchmark/ncortho/{1}/data/{1}.fa '
+    '--cpu 4 '
+    '\n'
+    )
+
+with open('/home/felixl/project/ncOrtho/benchmark/matmode_ncortho/mat_seed.txt', 'w') as sh:
+    for qname in seed_dict:
+        outstr = ncortho_call.format(seed_dict[qname], qname)
+        sh.write(outstr)
 
 
 

@@ -2,7 +2,7 @@ import glob
 from collections import Counter
 import os
 
-# blast_dir = r'C:\Users\felix\PycharmProjects\general\benchmarking\positive_set\data\TP_blast'
+# blast_dir = r'C:\Users\felix\PycharmProjects\general\benchmarking\scripts\data\TP_blast'
 # blast_dir = '/home/felixl/project/ncOrtho/benchmark/ncortho/analysis/TP_blast'
 blast_dir = '/home/felixl/project/ncOrtho/benchmark/filtered_mirbh/analysis/TP_blast'
 spec_dir = '/home/felixl/PycharmProjects/general/benchmarking/data/mirgenedb/spec_specific/'

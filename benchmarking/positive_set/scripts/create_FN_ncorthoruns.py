@@ -3,7 +3,7 @@ import os
 import subprocess as sp
 import sys
 
-mis_fam = '/home/felixl/PycharmProjects/general/benchmarking/positive_set/data/missing_fams_per_species.json'
+mis_fam = '/home/felixl/PycharmProjects/general/benchmarking/scripts/data/missing_fams_per_species.json'
 mirna_path = '/share/project2/felix/ncOrtho/mirgenedb/data/mirgenedb.tsv'
 outdir = '/home/felixl/project/ncOrtho/debugging'
 

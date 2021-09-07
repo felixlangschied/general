@@ -3,7 +3,7 @@ import os
 
 all_path = '/home/felixl/PycharmProjects/general/benchmarking/data/mirgenedb/ALL-pre.fas'
 abb_path = '/home/felixl/PycharmProjects/general/benchmarking/positive_set/data/mirgenedb/supp_tab.tsv'
-out_path = '/home/felixl/PycharmProjects/general/def_benchmark/data/spec_specific/{}_mirgenedb.fa'
+out_path = '/home/felixl/PycharmProjects/general/def_benchmark/data/spec_specific/{}.fa'
 
 
 map_dict = {}
@@ -32,5 +32,3 @@ with open(all_path, 'r') as fh:
         print(parsed_entry.strip())
         with open(out_file, 'a') as of:
             of.write(parsed_entry)
-
-# blastn -task megablast -query benchmark_mirgenedb.fa -db all_results -outfmt "6 std qcovhsp" -perc_identity 90 -qcov_hsp_perc 80 -out blastresults.txt
